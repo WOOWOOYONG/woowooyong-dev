@@ -65,44 +65,47 @@ const toc = computed(() => {
   <section
     class="h-fit flex-col-reverse items-start justify-center gap-16 pb-24 pt-12 xl:flex xl:flex-row"
   >
-    <div v-if="data!.tags.length > 0">
-      <a
-        v-for="tag in data!.tags"
-        :key="tag"
-        :href="`/notes/tags/${tag}`"
-        class="mb-4 mr-3 inline-block whitespace-nowrap rounded-lg bg-gray-600 px-4 py-2 text-sm font-semibold text-gray-100 duration-300 last:mr-0 hover:bg-opacity-90"
-      >
-        # {{ tag }}
-      </a>
-    </div>
-    <ContentRenderer
-      :value="data!"
-      class="prose mx-auto dark:prose-invert prose-headings:no-underline prose-h1:text-center"
-    />
-    <nav class="lg:mx-4 lg:px-4">
-      <div
-        v-if="data"
-        class="sticky right-0 top-10 order-last hidden border-l border-l-gray-700 px-6 opacity-80 2xl:inline-block"
-      >
-        <h2 class="mb-4 text-xl font-medium dark:text-gray-200">目錄</h2>
-        <ul class="space-y-2 dark:text-gray-100">
-          <li v-for="item in toc" :key="item.id">
-            <NuxtLink
-              class="line-clamp-1 uppercase"
-              :to="`#${item.id}`"
-              :class="{
-                'text-emerald-600 dark:text-emerald-400': currentId === item.id
-              }"
-              @click="setActive(item.id)"
-            >
-              {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
+    <div class="grid-cols-12 xl:grid">
+      <div v-if="data!.tags.length > 0" class="col-span-1">
+        <a
+          v-for="tag in data!.tags"
+          :key="tag"
+          :href="`/notes/tags/${tag}`"
+          class="mb-4 mr-3 inline-block whitespace-nowrap rounded-lg bg-gray-600 px-4 py-2 text-sm font-semibold text-gray-100 duration-300 last:mr-0 hover:bg-opacity-90"
+        >
+          # {{ tag }}
+        </a>
       </div>
-    </nav>
+      <article class="col-span-8">
+        <ContentRenderer
+          :value="data!"
+          class="prose mx-auto dark:prose-invert prose-headings:no-underline prose-h1:text-center prose-th:border prose-th:border-gray-600 prose-th:p-2 prose-td:border prose-td:border-gray-600 prose-td:p-2"
+        />
+      </article>
+      <nav v-if="data" class="col-span-3 lg:mx-4 lg:px-4">
+        <div
+          class="sticky right-0 top-10 order-last hidden border-l border-l-gray-700 px-6 opacity-80 xl:inline-block"
+        >
+          <h2 class="mb-4 text-xl font-medium dark:text-gray-200">目錄</h2>
+          <ul class="space-y-2 dark:text-gray-100">
+            <li v-for="item in toc" :key="item.id">
+              <NuxtLink
+                class="line-clamp-1 uppercase"
+                :to="`#${item.id}`"
+                :class="{
+                  'text-emerald-600 dark:text-emerald-400': currentId === item.id
+                }"
+                @click="setActive(item.id)"
+              >
+                {{ item.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
-    <!-- <div class="mx-auto">
+    <!-- <div vclass="mx-auto">
       <p>目前還沒有文章</p>
     </div> -->
   </section>

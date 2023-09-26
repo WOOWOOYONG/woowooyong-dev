@@ -15,11 +15,11 @@ const { data: notesList } = await useAsyncData('notesList', () => {
       <li
         v-for="(note, index) in notesList"
         :key="index"
-        class="border-themeBorder my-8 border-b-2 py-4 dark:text-gray-200"
+        class="my-8 border-b border-slate-600 py-4 dark:text-gray-200"
       >
         <NuxtLink
           :to="note._path"
-          class="block text-2xl font-bold duration-300 hover:translate-x-1"
+          class="block text-2xl font-bold duration-300 hover:-translate-x-1"
         >
           {{ note.title }}
         </NuxtLink>
