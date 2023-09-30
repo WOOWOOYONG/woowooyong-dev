@@ -66,25 +66,25 @@ const toc = computed(() => {
     class="h-fit flex-col-reverse items-start justify-center gap-16 pb-24 pt-12 xl:flex xl:flex-row"
   >
     <div class="grid-cols-12 xl:grid">
-      <div v-if="data!.tags.length > 0" class="col-span-1">
-        <a
-          v-for="tag in data!.tags"
-          :key="tag"
-          :href="`/notes/tags/${tag}`"
-          class="mb-4 mr-3 inline-block whitespace-nowrap rounded-lg bg-gray-600 px-4 py-2 text-sm font-semibold text-gray-100 duration-300 last:mr-0 hover:bg-opacity-90"
-        >
-          # {{ tag }}
-        </a>
-      </div>
-      <article class="col-span-8">
+      <article class="col-span-9">
         <ContentRenderer
           :value="data!"
           class="prose mx-auto dark:prose-invert prose-headings:no-underline prose-h1:text-center prose-th:border prose-th:border-gray-600 prose-th:p-2 prose-td:border prose-td:border-gray-600 prose-td:p-2"
         />
+        <div v-if="data!.tags.length > 0" class="mt-12 flex justify-center">
+          <a
+            v-for="tag in data!.tags"
+            :key="tag"
+            :href="`/notes/tags/${tag}`"
+            class="mb-4 mr-3 inline-block whitespace-nowrap rounded-lg bg-gray-600 px-4 py-2 text-sm font-semibold text-gray-100 duration-300 last:mr-0 hover:bg-opacity-90"
+          >
+            # {{ tag }}
+          </a>
+        </div>
       </article>
-      <nav v-if="data" class="col-span-3 lg:mx-4 lg:px-4">
+      <nav v-if="data" class="col-span-3 lg:mx-4 lg:px-4 lg:pt-20">
         <div
-          class="sticky right-0 top-10 order-last hidden border-l border-l-gray-700 px-6 opacity-80 xl:inline-block"
+          class="sticky right-0 top-20 order-last hidden border-l border-l-gray-700 px-6 opacity-80 xl:inline-block"
         >
           <h2 class="mb-4 text-xl font-medium dark:text-gray-200">目錄</h2>
           <ul class="space-y-2 dark:text-gray-100">

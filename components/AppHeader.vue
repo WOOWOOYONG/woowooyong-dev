@@ -45,8 +45,10 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header>
-    <nav class="bg-zinc-300 shadow-sm dark:bg-slate-700">
+  <header
+    class="top-0 z-50 w-full border-slate-900/10 bg-zinc-100 backdrop-blur dark:bg-slate-700 sm:sticky"
+  >
+    <nav class="shadow-sm">
       <div class="container flex justify-between gap-4 px-10 py-4 text-gray-600">
         <NuxtLink to="/" class="my-link font-bold">
           <Icon
