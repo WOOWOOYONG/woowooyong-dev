@@ -69,7 +69,7 @@ const toc = computed(() => {
       <article class="col-span-9">
         <ContentRenderer
           :value="data!"
-          class="prose mx-auto dark:prose-invert prose-headings:no-underline prose-h1:text-center prose-th:border prose-th:border-gray-600 prose-th:p-2 prose-td:border prose-td:border-gray-600 prose-td:p-2"
+          class="prose mx-auto dark:prose-invert prose-headings:pt-16 prose-headings:no-underline prose-h1:pt-0 prose-h1:text-center prose-th:border prose-th:border-gray-600 prose-th:p-2 prose-td:border prose-td:border-gray-600 prose-td:p-2"
         />
         <div v-if="data!.tags.length > 0" class="mt-12 flex justify-center">
           <a
@@ -90,7 +90,7 @@ const toc = computed(() => {
           <ul class="space-y-2 dark:text-gray-100">
             <li v-for="item in toc" :key="item.id">
               <NuxtLink
-                class="line-clamp-1 uppercase"
+                class="line-clamp-1 font-medium uppercase"
                 :to="`#${item.id}`"
                 :class="{
                   'text-emerald-600 dark:text-emerald-400': currentId === item.id

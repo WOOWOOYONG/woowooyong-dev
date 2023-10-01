@@ -10,38 +10,6 @@ const isDesktop = useMediaQuery('(min-width: 640px)')
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
 }
-
-// const pageWidth = ref()
-// const menuStatus = ref(false)
-// const toggleMenu = () => {
-//   if (window.innerWidth < 640) {
-//     menuStatus.value = !menuStatus.value
-//   }
-// }
-// const handleResize = () => {
-//   pageWidth.value = window.innerWidth
-//   if (pageWidth.value >= 640) {
-//     menuStatus.value = true
-//   } else {
-//     menuStatus.value = false
-//   }
-// }
-// if (process.client) {
-//   window.addEventListener('resize', handleResize)
-// }
-
-// onMounted(() => {
-//   const isDarkModePreferred = window.matchMedia('(prefers-color-scheme: dark)').matches
-//   const themeFromLocalStorage = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme
-
-//   if (themeFromLocalStorage) {
-//     setTheme(themeFromLocalStorage)
-//   } else {
-//     setTheme(isDarkModePreferred ? 'dark' : 'light')
-//   }
-
-//   handleResize()
-// })
 </script>
 
 <template>
