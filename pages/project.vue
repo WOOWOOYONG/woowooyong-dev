@@ -27,16 +27,16 @@ const projectList = [
       <li
         v-for="project in projectList"
         :key="project.id"
-        class="border-themeBorder max-w-[400px] overflow-hidden rounded-lg border"
+        class="max-w-[400px] overflow-hidden rounded-lg border"
       >
-        <img alt="" class="border-themeBorder border-b object-cover" />
+        <img alt="" class="border-b object-cover" />
         <div class="p-3">
           <p class="font-bold">{{ project.name }}</p>
           <a
             class="underline opacity-60 duration-200 hover:opacity-80"
             :href="project.link"
             target="_blank"
-            >前往查看</a
+            >Demo</a
           >
         </div>
       </li>
