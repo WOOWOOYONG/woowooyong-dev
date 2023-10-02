@@ -10,11 +10,34 @@ const isDesktop = useMediaQuery('(min-width: 640px)')
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
 }
+
+// 編譯後被直接替換為 0 或 1，效能優化
+const enum DIRECTION {
+  UP,
+  DOWN
+}
+
+const offset = ref(0)
+const direction = ref<DIRECTION>()
+
+const onScroll = () => (offset.value = window.scrollY)
+
+useEventListener('scroll', onScroll, {
+  capture: false,
+  passive: true
+})
+
+watch(offset, (value, oldValue) => {
+  direction.value = value > oldValue ? DIRECTION.DOWN : DIRECTION.UP
+})
 </script>
 
 <template>
   <header
-    class="top-0 z-50 w-full border-slate-900/10 bg-zinc-100 backdrop-blur dark:bg-slate-700 sm:sticky"
+    class="top-0 z-50 w-full border-slate-900/10 bg-zinc-100 backdrop-blur transition-transform duration-500 dark:bg-slate-700 sm:sticky"
+    :class="{
+      '-translate-y-full': direction === DIRECTION.DOWN
+    }"
   >
     <nav class="shadow-sm">
       <div class="container flex justify-between gap-4 px-10 py-4 text-gray-600">
