@@ -69,7 +69,7 @@ const toc = computed(() => {
       <article class="col-span-9">
         <ContentRenderer
           :value="data!"
-          class="prose mx-auto dark:prose-invert prose-headings:pt-16 prose-headings:no-underline prose-h1:pt-0 prose-h1:text-center prose-th:border prose-th:border-gray-600 prose-th:p-2 prose-td:border prose-td:border-gray-600 prose-td:p-2"
+          class="prose mx-auto dark:prose-invert prose-headings:pt-16 prose-a:no-underline prose-headings:no-underline prose-h1:pt-0 prose-h1:text-center prose-th:border prose-th:border-gray-600 prose-th:p-2 prose-td:border prose-td:border-gray-600 prose-td:p-2 prose-pre:bg-zinc-100 prose-pre:dark:bg-gray-900"
         />
         <div v-if="data!.tags.length > 0" class="mt-12 flex justify-center">
           <a
