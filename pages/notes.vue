@@ -26,7 +26,14 @@ const { data: notesList } = await useAsyncData('notesList', () => {
         <p class="my-2 line-clamp-1 opacity-70">
           {{ note.description }}
         </p>
-        <p>{{ note.date }}</p>
+        <div class="flex gap-4">
+          <span
+            v-for="(tag, index) in note.tags"
+            :key="index"
+            class="rounded bg-zinc-300 p-1 text-sm dark:bg-gray-600 dark:text-slate-100"
+            ># {{ tag }}</span
+          >
+        </div>
       </li>
     </ul>
   </div>
