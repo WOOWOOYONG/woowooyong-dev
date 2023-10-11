@@ -6,6 +6,17 @@ const { data } = (await useAsyncData(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne()
 })) as { data: any }
 
+const scrollTop = () => {
+  if (process.client) {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+}
+
+onMounted(scrollTop)
+
 // 目錄 (old)
 // const currentId = ref('')
 
