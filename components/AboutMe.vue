@@ -24,11 +24,12 @@
         </div>
         <div class="text-left text-lg">
           <p class="mb-2">關於我：</p>
-          <p class="leading-8">
+          <p class="mb-4 leading-8">
             嚮往DIY的生活方式．樂於研究及探索新技術<br />
             喜歡動手實作，注重細節，享受累積經驗值升等的過程<br />
             以成為前端工程師為目標努力中......
           </p>
+          <p class="">目前主要開發工具：Vue生態系</p>
         </div>
       </div>
     </section>
