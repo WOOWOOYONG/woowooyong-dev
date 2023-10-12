@@ -6,6 +6,10 @@ const { data } = (await useAsyncData(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne()
 })) as { data: any }
 
+definePageMeta({
+  middleware: ['scroll']
+})
+
 // 目錄 (old)
 // const currentId = ref('')
 

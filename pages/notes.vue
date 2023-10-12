@@ -4,6 +4,10 @@
 //   return fetchContentNavigation(queryContent('/'))
 // })
 
+definePageMeta({
+  middleware: ['scroll']
+})
+
 const { data: notesList } = await useAsyncData('notesList', () => {
   return queryContent('notes').sort({ date: -1 }).find()
 })

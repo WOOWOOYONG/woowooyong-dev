@@ -1,46 +1,47 @@
 <script setup lang="ts">
+definePageMeta({
+  middleware: ['scroll']
+})
+
 const projectList = [
   {
-    name: '小島聊癒所',
-    description: '',
+    name: '小島聊癒所 / 療癒文章平台',
+    imgName: 'island-cover.png',
+    description: '內容訂閱平台，以心靈成長、療癒類文章為主',
     id: 1,
-    link: 'https://island-of-healing.vercel.app/'
+    link: 'https://island-of-healing.vercel.app/',
+    tags: ['Nuxt3', 'TypeScript', 'Pinia', 'Tailwind', 'Pusher']
   },
   {
     name: 'HouseHotel-旅館訂房',
-    description: '',
+    imgName: 'hotel-cover.png',
+    description: '協作練習，使用V-Calendar串接API，提供房間預約服務',
     id: 2,
-    link: 'https://teamrocket12th.github.io/House-Hotel-Trio/#/'
+    link: 'https://teamrocket12th.github.io/House-Hotel-Trio/#/',
+    tags: ['Vue3', 'V-Calendar', 'Tailwind', 'Vee Validate', 'axios']
   },
   {
     name: 'WOWOROOM 床具電商平台',
-    description: '',
+    imgName: 'wowowroom-cover.png',
+    description: '協作練習，購物車CRUD，使用BEM統一CSS命名規則',
     id: 3,
-    link: 'https://tsaaiiiii.github.io/WOWOROOM-OnlineShop/'
+    link: 'https://tsaaiiiii.github.io/WOWOROOM-OnlineShop/',
+    tags: ['JavaScript', 'Sass', 'BEM', 'axios']
+  },
+  {
+    name: 'My PokeDex',
+    imgName: 'pokedex-cover.png',
+    description: '練習使用TypeScript串接API，可依照地區分類瀏覽',
+    id: 4,
+    link: 'https://woowooyong.github.io/Practice6-Pokedex/index.html',
+    tags: ['TypeScript', 'PokeAPI']
   }
 ]
 </script>
 
 <template>
   <section class="pb-24 pt-12">
-    <ul class="grid xl:grid-cols-3 xl:justify-items-center">
-      <li
-        v-for="project in projectList"
-        :key="project.id"
-        class="max-w-[400px] overflow-hidden rounded-lg border"
-      >
-        <img alt="" class="border-b object-cover" />
-        <div class="p-3">
-          <p class="font-bold">{{ project.name }}</p>
-          <a
-            class="underline opacity-60 duration-200 hover:opacity-80"
-            :href="project.link"
-            target="_blank"
-            >Demo</a
-          >
-        </div>
-      </li>
-    </ul>
+    <ProjectCard :project-list="projectList" />
   </section>
 </template>
 
