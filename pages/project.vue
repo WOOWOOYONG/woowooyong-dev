@@ -34,7 +34,7 @@ const projectList = [
     description: '練習使用TypeScript串接API，可依照地區分類瀏覽',
     id: 4,
     link: 'https://woowooyong.github.io/Practice6-Pokedex/index.html',
-    tags: ['TypeScript', 'PokeAPI']
+    tags: ['TypeScript', 'PokeAPI', 'Lazy-Loading']
   }
 ]
 </script>
