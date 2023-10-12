@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  middleware: ['scroll']
+})
+
 const projectList = [
   {
     name: '小島聊癒所 / 療癒文章平台',
