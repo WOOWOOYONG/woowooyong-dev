@@ -30,7 +30,7 @@ const { data: notesList } = await useAsyncData('notesList', () => {
           <span
             v-for="(tag, index) in note.tags"
             :key="index"
-            class="rounded bg-zinc-300 p-1 text-sm dark:bg-gray-600 dark:text-slate-100"
+            class="rounded bg-slate-300 px-2 py-1 text-sm dark:bg-gray-600 dark:text-slate-100"
             ># {{ tag }}</span
           >
         </div>
