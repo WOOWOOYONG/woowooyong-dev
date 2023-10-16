@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const navigation = [
   { name: 'Notes', link: '/notes', desc: '筆記列表' },
-  { name: 'Project', link: '/project', desc: '專案列表' }
+  { name: 'Project', link: '/projects', desc: '專案列表' }
 ]
 
 const isOpen = ref(false)

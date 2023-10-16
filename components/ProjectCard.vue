@@ -29,8 +29,11 @@ defineProps<{ projectList: ProjectInfo[] }>()
           <div
             class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100"
           >
-            <NuxtLink :to="`/project/${project.id}`" class="rounded bg-gray-800 p-2 text-white">
-              查看更多
+            <NuxtLink
+              :to="`/projects/project${project.id}`"
+              class="rounded bg-gray-800 p-2 text-white"
+            >
+              Read More
             </NuxtLink>
           </div>
         </div>
