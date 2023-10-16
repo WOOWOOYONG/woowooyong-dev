@@ -12,18 +12,31 @@ defineProps<{ projectList: ProjectInfo[] }>()
 </script>
 
 <template>
-  <ul class="mb-2 grid gap-12 xl:grid-cols-2 xl:justify-items-center">
+  <ul class="mb-2 grid place-content-center gap-12 xl:grid-cols-2 xl:justify-items-center">
     <li
       v-for="project in projectList"
       :key="project.id"
-      class="max-w-[480px] overflow-hidden rounded-lg"
+      class="group max-w-[480px] overflow-hidden"
     >
-      <div>
-        <img
-          alt="project-cover"
-          :src="`/images/${project.imgName}`"
-          class="mb-4 w-full object-cover"
-        />
+      <div class="relative mb-4 overflow-hidden rounded-lg">
+        <div class="transform transition-transform duration-200 group-hover:scale-105">
+          <img
+            alt="project-cover"
+            :src="`/images/${project.imgName}`"
+            class="w-full object-cover"
+            loading="lazy"
+          />
+          <div
+            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100"
+          >
+            <NuxtLink
+              :to="`/projects/project${project.id}`"
+              class="rounded bg-gray-800 p-2 text-white"
+            >
+              Read More
+            </NuxtLink>
+          </div>
+        </div>
       </div>
 
       <div class="px-4 pb-4">

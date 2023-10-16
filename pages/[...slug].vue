@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { path } = useRoute()
+console.log(path)
 // const slug = useRoute().params.slug.toString().replace(/,/g, '/')
 
 const { data } = (await useAsyncData(`content-${path}`, () => {
@@ -70,20 +71,18 @@ const observerOptions = reactive({
   threshold: 1
 })
 
-onMounted(async () => {
-  await nextTick(() => {
-    observer.value = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const id = entry.target.getAttribute('id') as string
-        if (entry.isIntersecting) {
-          activeTocId.value = id
-        }
-      })
-    }, observerOptions)
-
-    document.querySelectorAll('.article h2[id], .article h3[id]').forEach((section) => {
-      observer.value?.observe(section)
+onMounted(() => {
+  observer.value = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute('id') as string
+      if (entry.isIntersecting) {
+        activeTocId.value = id
+      }
     })
+  }, observerOptions)
+
+  document.querySelectorAll('.article h2[id], .article h3[id]').forEach((section) => {
+    observer.value?.observe(section)
   })
 })
 
