@@ -6,7 +6,7 @@
       <div class="dark:text-gray-300">
         <div class="mb-10 flex flex-col items-center gap-4">
           <div>
-            <img src="/swallows.jpeg" alt="avatar" class="h-32 w-32 rounded-full" />
+            <NuxtImg src="/swallows.jpeg" alt="avatar" class="h-32 w-32 rounded-full" />
           </div>
           <div>
             <h1 class="mb-2 text-center text-xl font-medium">YONG</h1>

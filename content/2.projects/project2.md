@@ -4,29 +4,31 @@ title: 'House-Hotel 旅館訂房服務'
 
 # House-Hotel 旅館預約服務
 
-### 說明
+## 簡介
+- THE F2E 2nd 第六關 - 旅館預約服務
 - 火箭隊前端組協作作業（3人）
 
-### 相關連結
-- [Github Repo](https://github.com/TeamRocket12th/House-Hotel-Trio)
-- [Demo](https://teamrocket12th.github.io/House-Hotel-Trio/#/)
 
-### 功能
+
+## 功能
 
 - 可以觀看 6 種房型的詳細資訊
-- 可以用日曆方式，瀏覽未來 90 天已預約與尚未預約的時段
-- 在選擇預約日期時，會即時顯示訂房價格總價
+- 可以使用行事曆瀏覽未來 90 天已預約與尚未預約的時段
+- 在選擇預約日期時，會即時顯示訂房總價
 - 可以線上訂房，只能預約未來 90 天內的時段
 - 若預約成功，會回傳成功通知
 - 若預約失敗，會回傳訊息讓客戶知曉
 
-### 練習內容
+## 練習內容
 
-- Vue3+Vite
-- Composition API
-- Git Flow
+- 使用Composition API開發
+- 使用Tailwind CSS框架管理樣式
+- 封裝axios，更有效率的管理多個API請求
+- 使用Github Flow進行協作
+- 負責Code Review 確保程式碼品質
+- 研究Vite/Vue 部署到Github Pages
 
-### 使用套件
+## 使用套件
 
 1. [v-calendar](https://www.notion.so/Trio-f03803f1aba6469c8e1a15589504d114)
 2. [Vee Validate](https://vee-validate.logaretm.com/v4/)
@@ -37,9 +39,11 @@ title: 'House-Hotel 旅館訂房服務'
 7. [pinia](https://pinia.vuejs.org/)
 8. [Tailwind CSS](https://tailwindcss.com/)
 
-### 相關文件
+## 相關文件
 
 - [The F2E - 第六關 - 旅館預約服務](https://challenge.thef2e.com/news/17)
 - [設計稿](https://xd.adobe.com/spec/808b17f6-c862-47bd-4410-58440ddd01d7-f6ba/specs/)
 
-
+## 相關連結
+- [Github Repo](https://github.com/TeamRocket12th/House-Hotel-Trio)
+- [Demo](https://teamrocket12th.github.io/House-Hotel-Trio/#/)

@@ -5,8 +5,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
     '@nuxtjs/color-mode',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@nuxt/image'
   ],
+  image: {
+    format: ['webp']
+  },
   content: {
     highlight: {
       theme: {

@@ -19,12 +19,13 @@ defineProps<{ projectList: ProjectInfo[] }>()
       class="group max-w-[480px] overflow-hidden"
     >
       <div class="relative mb-4 overflow-hidden rounded-lg">
-        <div class="transform transition-transform duration-200 group-hover:scale-105">
-          <img
+        <div class="h-[300px] transform transition-transform duration-200 group-hover:scale-105">
+          <NuxtImg
             alt="project-cover"
             :src="`/images/${project.imgName}`"
-            class="w-full object-cover"
-            loading="lazy"
+            class="h-full w-full"
+            fit="cover"
+            quality="80"
           />
           <div
             class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100"

@@ -3,6 +3,13 @@ definePageMeta({
   middleware: ['scroll']
 })
 
+useSeoMeta({
+  title: 'WOOWOOYONG-我的專案',
+  ogTitle: 'WOOWOOYONG-我的專案',
+  description: '紀錄做過的一些專案和練習作品',
+  ogDescription: '紀錄一些做過的專案和練習作品'
+})
+
 const projectList = [
   {
     name: '小島聊癒所 / 療癒文章平台',
