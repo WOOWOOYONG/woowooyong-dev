@@ -20,7 +20,7 @@ defineProps<{ projectList: ProjectInfo[] }>()
     >
       <div class="relative mb-4 overflow-hidden rounded-lg">
         <div class="transform transition-transform duration-200 group-hover:scale-105">
-          <img
+          <NuxtImg
             alt="project-cover"
             :src="`/images/${project.imgName}`"
             class="w-full object-cover"

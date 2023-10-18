@@ -3,19 +3,16 @@ title: 'Pokemon 圖鑑'
 ---
 # My Pokemon 圖鑑
 
+## 簡介
+- 初期練習作品，使用JavaScript串接第三方API，自行加上選取地區的功能
+- 後來使用TypeScript重構，並練習圖片的Lazy Loading
+- 使用IntersectionObserver幫pokemon卡片加上動畫
 
 
-### 相關連結
-- [Github Repo](https://github.com/WOOWOOYONG/Practice6-Pokedex)
-- [Demo](https://woowooyong.github.io/Practice6-Pokedex/)
-- [POKEAPI](https://pokeapi.co/)
-
-
-### 功能
+## 功能
 - 使用者可以查看指定地區的所有Pokemon資訊
 
-### 練習內容
-
+## 練習內容
 1. 依照地區分類
 2. Fetch API 練習
 3. 2022/10/30 新增 Pokemon card 資訊，背景顏色隨屬性改變
@@ -27,4 +24,7 @@ title: 'Pokemon 圖鑑'
 2. 練習改寫成TypeScript
 3. IntersectionObserver練習
 
-
+## 相關連結
+- [Github Repo](https://github.com/WOOWOOYONG/Practice6-Pokedex)
+- [Demo](https://woowooyong.github.io/Practice6-Pokedex/)
+- [POKEAPI](https://pokeapi.co/)

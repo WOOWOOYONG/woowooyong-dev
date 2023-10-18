@@ -1,8 +1,14 @@
-<script setup>
+<script setup lang="ts">
 // fetchContentNavigation 回傳值比較簡潔
 // const { data: blogNav } = await useAsyncData('navigation', () => {
 //   return fetchContentNavigation(queryContent('/'))
 // })
+useSeoMeta({
+  title: 'WOOWOOYONG-我的筆記',
+  ogTitle: 'WOOWOOYONG-我的筆記',
+  description: '存放一些心得筆記',
+  ogDescription: '存放一些心得筆記'
+})
 
 const { data: notesList } = await useAsyncData('notesList', () => {
   return queryContent('notes').sort({ date: -1 }).find()
@@ -26,6 +32,11 @@ const { data: notesList } = await useAsyncData('notesList', () => {
         <p class="my-2 line-clamp-1 opacity-70">
           {{ note.description }}
         </p>
+        <div class="mb-4 flex items-center gap-2">
+          <span class="pb-1"><Icon name="material-symbols:calendar-today-rounded" /></span>
+          <span class="">{{ note.date }}</span>
+        </div>
+
         <div class="flex gap-4">
           <span
             v-for="(tag, index) in note.tags"

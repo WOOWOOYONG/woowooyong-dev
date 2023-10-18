@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { path } = useRoute()
-console.log(path)
 // const slug = useRoute().params.slug.toString().replace(/,/g, '/')
 
 const { data } = (await useAsyncData(`content-${path}`, () => {
