@@ -4,6 +4,8 @@ title: 'WOWOROOM床具電商平台'
 
 # WOWOROOM床具電商平台
 
+![cover](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/dev/public/images/projects/project3-1.jpg)
+
 ## 簡介
 - 簡單的一頁式床具購物網站
 - 使用者可以選取想要的商品，並填寫資料送出訂單
@@ -17,16 +19,21 @@ title: 'WOWOROOM床具電商平台'
 - 可以選取產品加入購物車
 - 可以送出訂購資料
 
+![demo-img1](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/dev/public/images/projects/project3-3.jpg)
+![demo-img2](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/dev/public/images/projects/project3-2.jpg)
+
 
 **後台管理者：**
 - 可以查看訂單明細
 - 可以更改訂單狀態和刪除訂單
 - 可以從圖表查看產品營收比重
 
+![demo-img3](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/dev/public/images/projects/project3-4.jpg)
+
 ## 練習內容
 - 火箭隊協作作業（2人）
 - 購物車CRUD
-- Github Flow
+- 使用Github Flow進行協作
 - SASS BEM命名原則
 - 使用Sweetalert2提示訊息
 - 使用axios串接API
