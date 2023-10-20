@@ -4,7 +4,7 @@ title: 'House-Hotel 旅館訂房服務'
 
 # House-Hotel 旅館預約服務
 
-![cover](../../public/images/hotel-cover.png)
+![cover](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/main/public/images/hotel-cover.png)
 
 ## 簡介
 - 基於Vue3和Tailwind CSS開發的訂房網站

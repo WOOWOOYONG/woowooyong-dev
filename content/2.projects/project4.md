@@ -3,7 +3,7 @@ title: 'Pokemon 圖鑑'
 ---
 # My Pokemon 圖鑑
 
-![cover](../../public/images/projects/project4-2.jpg)
+![cover](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/dev/public/images/projects/project4-2.jpg)
 
 ## 簡介
 - 初期練習作品，使用JavaScript串接第三方API，自行加上選取地區的功能
@@ -14,7 +14,7 @@ title: 'Pokemon 圖鑑'
 ## 功能
 - 使用者可以查看指定地區的所有Pokemon資訊
 
-![demo-img](../../public/images/projects/project4-1.jpg)
+![demo-img](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/dev/public/images/projects/project4-1.jpg)
 
 ## 練習內容
 1. 依照地區分類

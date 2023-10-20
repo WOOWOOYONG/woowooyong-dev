@@ -4,6 +4,9 @@ title: '小島聊癒所'
 
 # 小島聊癒所 | 療癒文章平台
 
+![cover](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/dev/public/images/island-cover.png)
+
+
 ## 簡介
 
 ## 功能
