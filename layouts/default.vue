@@ -2,7 +2,7 @@
   <div
     class="flex min-h-screen flex-col bg-zinc-200 transition-colors duration-300 dark:bg-slate-800"
   >
-    <NuxtLoadingIndicator />
+    <NuxtLoadingIndicator :throttle="500" />
     <AppHeader />
     <main class="flex-grow">
       <div class="container">

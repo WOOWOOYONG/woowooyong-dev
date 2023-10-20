@@ -4,10 +4,11 @@ title: 'House-Hotel 旅館訂房服務'
 
 # House-Hotel 旅館預約服務
 
-## 簡介
-- THE F2E 2nd 第六關 - 旅館預約服務
-- 火箭隊前端組協作作業（3人）
+![cover](../../public/images/hotel-cover.png)
 
+## 簡介
+- 基於Vue3和Tailwind CSS開發的訂房網站
+- 提供了六種房型詳細資訊，並能透過線上行事曆瀏覽未來90天的預約狀況
 
 
 ## 功能
@@ -16,12 +17,12 @@ title: 'House-Hotel 旅館訂房服務'
 - 可以使用行事曆瀏覽未來 90 天已預約與尚未預約的時段
 - 在選擇預約日期時，會即時顯示訂房總價
 - 可以線上訂房，只能預約未來 90 天內的時段
-- 若預約成功，會回傳成功通知
-- 若預約失敗，會回傳訊息讓客戶知曉
+- 預約成功 / 失敗，會回傳對應的通知
 
 ## 練習內容
 
-- 使用Composition API開發
+- 火箭隊協作作業（3人）
+- 使用Vue3 Composition API開發
 - 使用Tailwind CSS框架管理樣式
 - 封裝axios，更有效率的管理多個API請求
 - 使用Github Flow進行協作

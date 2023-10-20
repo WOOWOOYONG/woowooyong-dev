@@ -23,7 +23,7 @@ defineProps<{ projectList: ProjectInfo[] }>()
           <NuxtImg
             alt="project-cover"
             :src="`/images/${project.imgName}`"
-            class="h-full w-full"
+            class="h-full w-full object-contain"
             fit="cover"
             quality="80"
           />
@@ -51,7 +51,7 @@ defineProps<{ projectList: ProjectInfo[] }>()
         <p class="mb-6 text-gray-700 dark:text-gray-100">
           {{ project.description }}
         </p>
-        <ul class="flex gap-3">
+        <ul class="flex flex-wrap gap-3">
           <li
             v-for="(tag, index) in project.tags"
             :key="index"
