@@ -40,7 +40,7 @@ watch(offset, (value, oldValue) => {
     }"
   >
     <nav class="shadow-sm">
-      <div class="container flex justify-between gap-4 px-10 py-4 text-gray-600">
+      <div class="container flex items-center justify-between gap-4 px-10 py-4 text-gray-600">
         <NuxtLink to="/" class="my-link font-bold">
           <Icon
             name="heroicons-outline:home"
@@ -67,9 +67,12 @@ watch(offset, (value, oldValue) => {
           </Transition>
         </ClientOnly>
         <!-- Hamburger Button for Mobile -->
-        <button class="p-2 sm:hidden" type="button" @click="toggleMenu">
-          <Icon name="ri:menu-5-fill" size="24" class="dark:text-gray-300" />
-        </button>
+        <div v-if="!isDesktop">
+          <ThemeBtn />
+          <button class="ml-6 p-2" type="button" @click="toggleMenu">
+            <Icon name="ri:menu-5-fill" size="24" class="dark:text-gray-300" />
+          </button>
+        </div>
       </div>
     </nav>
     <!-- Mobile Menu -->
@@ -87,9 +90,9 @@ watch(offset, (value, oldValue) => {
             {{ item.name }}
           </NuxtLink>
         </li>
-        <li class="my-2 font-bold sm:my-0" @click="isOpen = false">
+        <!-- <li class="my-2 font-bold sm:my-0" @click="isOpen = false">
           <ThemeBtn />
-        </li>
+        </li> -->
       </ul>
     </div>
   </header>
