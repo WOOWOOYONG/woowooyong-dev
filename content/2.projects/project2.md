@@ -31,14 +31,14 @@ title: 'House-Hotel 旅館訂房服務'
 
 ## 使用套件
 
-1. [v-calendar](https://www.notion.so/Trio-f03803f1aba6469c8e1a15589504d114)
-2. [Vee Validate](https://vee-validate.logaretm.com/v4/)
-3. [axios](https://axios-http.com/)
-4. [Swiper](https://swiperjs.com/vue)
-5. [vue3 loading-overlay](https://github.com/moyoujun/vue3-loading-overlay)
-6. [SweetAlert2](https://sweetalert2.github.io/)
-7. [pinia](https://pinia.vuejs.org/)
-8. [Tailwind CSS](https://tailwindcss.com/)
+- [v-calendar](https://www.notion.so/Trio-f03803f1aba6469c8e1a15589504d114)
+- [Vee Validate](https://vee-validate.logaretm.com/v4/)
+- [axios](https://axios-http.com/)
+- [Swiper](https://swiperjs.com/vue)
+- [vue3 loading-overlay](https://github.com/moyoujun/vue3-loading-overlay)
+- [SweetAlert2](https://sweetalert2.github.io/)
+- [pinia](https://pinia.vuejs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## 相關文件
 
