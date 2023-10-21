@@ -19,6 +19,9 @@ title: 'House-Hotel 旅館訂房服務'
 - 可以線上訂房，只能預約未來 90 天內的時段
 - 預約成功 / 失敗，會回傳對應的通知
 
+![deom-img1](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/dev/public/images/projects/project2-1.jpg)
+![deom-img2](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/dev/public/images/projects/project2-2.jpg)
+
 ## 練習內容
 
 - 火箭隊協作作業（3人）
