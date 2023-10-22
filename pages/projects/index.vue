@@ -48,7 +48,7 @@ const projectList = [
 
 <template>
   <div>
-    <h2 class="title">我的專案與練習作品</h2>
+    <h2 class="title">專案與練習作品</h2>
     <section class="pb-24 pt-12">
       <ProjectCard :project-list="projectList" />
     </section>

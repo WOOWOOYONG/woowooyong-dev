@@ -19,11 +19,11 @@ const { data: notesList } = await useAsyncData('notesList', () => {
 <template>
   <div>
     <h2 class="title">一些心得筆記</h2>
-    <section class="px-3 pb-24 sm:grid sm:grid-cols-12 sm:px-0">
+    <section class="px-3 pb-24 xl:grid xl:grid-cols-12 xl:px-0">
       <aside class="pt-12 sm:col-span-3">
         <CategoryTag />
       </aside>
-      <div class="sm:col-span-7 sm:pr-52">
+      <div class="sm:col-span-7 xl:pr-52">
         <ul>
           <li
             v-for="(note, index) in notesList"

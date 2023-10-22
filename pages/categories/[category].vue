@@ -15,12 +15,12 @@ const { data: notes } = await useAsyncData('category', () =>
 <template>
   <div>
     <h2 class="title">關於 {{ route.params.category }} 的筆記</h2>
-    <section class="px-3 pb-24 sm:grid sm:grid-cols-12 sm:px-0">
+    <section class="px-3 pb-24 sm:px-0 xl:grid xl:grid-cols-12">
       <aside class="pt-12 sm:col-span-3">
         <CategoryTag />
       </aside>
-      <div class="sm:col-span-7 sm:pr-52">
-        <ul v-if="notes!.length > 0" class="sm:pr-52">
+      <div class="sm:col-span-7 xl:pr-52">
+        <ul v-if="notes!.length > 0">
           <li
             v-for="(note, index) in notes"
             :key="index"

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const categories = ['JavaScript', 'Nuxt', 'Vue', 'TypeScript', 'Web']
+const categories = ['Nuxt', 'Vue', 'Web', 'JavaScript', 'TypeScript']
 </script>
 
 <template>
   <div>
-    <ul class="flex flex-wrap items-center gap-3 sm:flex-col sm:items-start">
+    <ul class="flex flex-wrap items-center gap-3 sm:items-start sm:gap-5 xl:flex-col">
       <li v-for="(tag, index) in categories" :key="index">
         <NuxtLink
           :to="`/categories/${tag}`"
