@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .title {
+    @apply mt-8 text-center text-3xl font-bold
+  }
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.2s ease-in-out;

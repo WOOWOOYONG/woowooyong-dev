@@ -6,8 +6,8 @@ definePageMeta({
 useSeoMeta({
   title: 'WOOWOOYONG-我的專案',
   ogTitle: 'WOOWOOYONG-我的專案',
-  description: '紀錄做過的一些專案和練習作品',
-  ogDescription: '紀錄一些做過的專案和練習作品'
+  description: '我的專案和練習作品',
+  ogDescription: '我的專案和練習作品'
 })
 
 const projectList = [
@@ -47,9 +47,12 @@ const projectList = [
 </script>
 
 <template>
-  <section class="pb-24 pt-12">
-    <ProjectCard :project-list="projectList" />
-  </section>
+  <div>
+    <h2 class="title">我的專案與練習作品</h2>
+    <section class="pb-24 pt-12">
+      <ProjectCard :project-list="projectList" />
+    </section>
+  </div>
 </template>
 
 <style scoped></style>
