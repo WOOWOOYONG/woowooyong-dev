@@ -107,14 +107,13 @@ const updateId = (newId: string) => {
           class="prose mx-auto dark:prose-invert prose-headings:pt-16 prose-headings:no-underline prose-h1:pt-0 prose-h1:text-center prose-a:border-b-2 prose-a:border-b-gray-700 prose-a:pb-[2px] prose-a:no-underline prose-pre:bg-zinc-100 prose-th:border prose-th:border-gray-600 prose-th:p-2 prose-td:border prose-td:border-gray-600 prose-td:p-2 prose-pre:dark:bg-gray-900"
         />
         <div v-if="data.tags.length > 0" class="mt-12 flex justify-center">
-          <a
+          <span
             v-for="tag in data!.tags"
             :key="tag"
-            :href="`/notes/tags/${tag}`"
             class="mb-4 mr-3 inline-block whitespace-nowrap rounded-lg bg-gray-600 px-4 py-2 text-sm font-semibold text-gray-100 duration-300 last:mr-0 hover:bg-opacity-90"
           >
             # {{ tag }}
-          </a>
+          </span>
         </div>
       </article>
       <!-- <nav class="col-span-3 lg:mx-4 lg:px-4 lg:pt-20">
