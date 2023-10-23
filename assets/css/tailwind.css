@@ -4,7 +4,7 @@
 
 @layer components {
   .title {
-    @apply mt-8 text-center text-3xl font-bold
+    @apply mt-8 text-center text-3xl font-bold dark:text-gray-100
   }
 }
 
