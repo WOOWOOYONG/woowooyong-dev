@@ -8,7 +8,7 @@ const categories = ['Nuxt', 'Vue', 'Web', 'JavaScript', 'TypeScript', 'Alogorith
       <li v-for="(tag, index) in categories" :key="index">
         <NuxtLink
           :to="`/categories/${tag}`"
-          class="inline-block rounded-lg bg-slate-500 px-3 py-2 font-medium text-gray-100 transition-all hover:scale-105"
+          class="inline-block rounded bg-slate-300 px-2.5 py-1 transition-all hover:scale-110 dark:bg-gray-600 dark:text-slate-100"
           ># {{ tag }}</NuxtLink
         >
       </li>
