@@ -141,7 +141,7 @@ const updateId = (newId: string) => {
         <div
           class="sticky right-0 top-20 order-last hidden border-l border-l-gray-700 px-6 opacity-80 xl:inline-block"
         >
-          <h2 class="mb-4 text-xl font-medium dark:text-gray-200">目錄</h2>
+          <h2 class="mb-4 text-lg font-medium dark:text-gray-200">Table Of Contents</h2>
           <TableOfContents :active-toc-id="activeTocId!" @update-active-id="updateId" />
         </div>
       </div>
