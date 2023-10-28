@@ -67,22 +67,31 @@ const nuxtContent = ref(null)
 const observer: Ref<IntersectionObserver | null | undefined> = ref(null)
 const observerOptions = reactive({
   root: nuxtContent.value,
-  threshold: 1
+  threshold: 1,
+  rootMargin: '0px 0px -100px 0px'
 })
 
 onMounted(() => {
   observer.value = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const id = entry.target.getAttribute('id') as string
+      const element = document.getElementById(`toc-${id}`)
       if (entry.isIntersecting) {
-        activeTocId.value = id
+        element?.classList.add('toc-active')
+        element?.classList.remove('dark:text-gray-100')
+      } else {
+        element?.classList.remove('toc-active')
+        element?.classList.add('dark:text-gray-100')
       }
     })
   }, observerOptions)
 
-  document.querySelectorAll('.article h2[id], .article h3[id]').forEach((section) => {
-    observer.value?.observe(section)
-  })
+  setTimeout(() => {
+    const allHElements = document.querySelectorAll('.article h2[id], .article h3[id]')
+    allHElements.forEach((section) => {
+      observer.value?.observe(section)
+    })
+  }, 500)
 })
 
 onUnmounted(() => {
@@ -91,7 +100,6 @@ onUnmounted(() => {
 
 const updateId = (newId: string) => {
   activeTocId.value = newId
-  observer.value?.disconnect()
 }
 </script>
 
@@ -141,7 +149,7 @@ const updateId = (newId: string) => {
         <div
           class="sticky right-0 top-20 order-last hidden border-l border-l-gray-700 px-6 opacity-80 xl:inline-block"
         >
-          <h2 class="mb-4 text-lg font-medium dark:text-gray-200">Table Of Contents</h2>
+          <h2 class="mb-4 text-lg font-medium dark:text-gray-200">目錄</h2>
           <TableOfContents :active-toc-id="activeTocId!" @update-active-id="updateId" />
         </div>
       </div>
