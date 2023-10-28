@@ -68,6 +68,7 @@ const observer: Ref<IntersectionObserver | null | undefined> = ref(null)
 const observerOptions = reactive({
   root: nuxtContent.value,
   threshold: 1
+  // rootMargin: '0px 0px -100px 0px'
 })
 
 onMounted(() => {
@@ -80,9 +81,12 @@ onMounted(() => {
     })
   }, observerOptions)
 
-  document.querySelectorAll('.article h2[id], .article h3[id]').forEach((section) => {
-    observer.value?.observe(section)
-  })
+  setTimeout(() => {
+    const allHElements = document.querySelectorAll('.article h2[id], .article h3[id]')
+    allHElements.forEach((section) => {
+      observer.value?.observe(section)
+    })
+  }, 0)
 })
 
 onUnmounted(() => {
@@ -141,7 +145,7 @@ const updateId = (newId: string) => {
         <div
           class="sticky right-0 top-20 order-last hidden border-l border-l-gray-700 px-6 opacity-80 xl:inline-block"
         >
-          <h2 class="mb-4 text-lg font-medium dark:text-gray-200">Table Of Contents</h2>
+          <h2 class="mb-4 text-lg font-medium dark:text-gray-200">目錄</h2>
           <TableOfContents :active-toc-id="activeTocId!" @update-active-id="updateId" />
         </div>
       </div>
