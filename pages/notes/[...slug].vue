@@ -67,16 +67,21 @@ const nuxtContent = ref(null)
 const observer: Ref<IntersectionObserver | null | undefined> = ref(null)
 const observerOptions = reactive({
   root: nuxtContent.value,
-  threshold: 1
-  // rootMargin: '0px 0px -100px 0px'
+  threshold: 1,
+  rootMargin: '0px 0px -100px 0px'
 })
 
 onMounted(() => {
   observer.value = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const id = entry.target.getAttribute('id') as string
+      const element = document.getElementById(`toc-${id}`)
       if (entry.isIntersecting) {
-        activeTocId.value = id
+        element?.classList.add('toc-active')
+        element?.classList.remove('dark:text-gray-100')
+      } else {
+        element?.classList.remove('toc-active')
+        element?.classList.add('dark:text-gray-100')
       }
     })
   }, observerOptions)
@@ -86,7 +91,7 @@ onMounted(() => {
     allHElements.forEach((section) => {
       observer.value?.observe(section)
     })
-  }, 0)
+  }, 500)
 })
 
 onUnmounted(() => {
@@ -95,7 +100,6 @@ onUnmounted(() => {
 
 const updateId = (newId: string) => {
   activeTocId.value = newId
-  observer.value?.disconnect()
 }
 </script>
 
