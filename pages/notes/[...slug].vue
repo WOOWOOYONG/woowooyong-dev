@@ -86,7 +86,7 @@ const updateId = (newId: string) => {
         <ContentRenderer
           ref="nuxtContent"
           :value="data!"
-          class="prose mx-auto dark:prose-invert prose-headings:pt-16 prose-headings:no-underline prose-h1:pt-0 prose-h1:text-center prose-a:border-b-2 prose-a:border-b-gray-700 prose-a:pb-[2px] prose-a:no-underline prose-pre:bg-zinc-100 prose-th:border prose-th:border-gray-600 prose-th:p-2 prose-td:border prose-td:border-gray-600 prose-td:p-2 prose-pre:dark:bg-gray-900"
+          class="prose mx-auto dark:prose-invert prose-headings:pt-14 prose-headings:no-underline prose-h1:pt-0 prose-h1:text-center prose-a:border-b-2 prose-a:border-b-gray-700 prose-a:pb-[2px] prose-a:no-underline prose-pre:bg-zinc-100 prose-th:border prose-th:border-gray-600 prose-th:p-2 prose-td:border prose-td:border-gray-600 prose-td:p-2 prose-pre:dark:bg-gray-900"
         />
         <div v-if="data.tags.length > 0" class="mt-12 flex justify-center">
           <span
@@ -108,7 +108,7 @@ const updateId = (newId: string) => {
       </div>
     </div>
     <div v-else vclass="mx-auto">
-      <p>目前還沒有文章</p>
+      <p class="text-xl dark:text-gray-200">目前還沒有文章</p>
     </div>
   </section>
 </template>
