@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { path } = useRoute()
-// const slug = useRoute().params.slug.toString().replace(/,/g, '/')
 
 const { data } = (await useAsyncData(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne()
@@ -10,61 +9,11 @@ definePageMeta({
   middleware: ['scroll']
 })
 
-// 目錄 (old)
-// const currentId = ref('')
-
-// const setActive = (id: string) => {
-//   currentId.value = id
-// }
-
-// type TextNode = {
-//   type: 'text'
-//   value: string
-// }
-
-// type ElementNode = {
-//   type: 'element'
-//   tag: string
-//   props: {
-//     [key: string]: any
-//   }
-//   children: TextNode[]
-// }
-
-// type ContentItem = {
-//   id: string
-//   title: string
-//   depth: number
-// }
-
-// const toc = computed(() => {
-//   if (!data.value) {
-//     return []
-//   }
-//   const items = data.value.body?.children
-//   if (!items) {
-//     return []
-//   }
-
-//   const toc: ContentItem[] = []
-//   const tags = ['h2', 'h3', 'h4', 'h5', 'h6']
-//   items.forEach((item: ElementNode) => {
-//     if (tags.includes(item.tag)) {
-//       toc.push({
-//         id: item.props.id,
-//         title: item.props.id.toString().replace(/-/g, ' '),
-//         depth: Number(item.tag.replace(/h/g, ''))
-//       })
-//     }
-//   })
-//   return toc
-// })
-
-// 目錄(new)
+// 目錄
 const activeTocId = ref<string>('')
 const nuxtContent = ref(null)
 
-const observer: Ref<IntersectionObserver | null | undefined> = ref(null)
+const observer = ref<IntersectionObserver | null | undefined>(null)
 const observerOptions = reactive({
   root: nuxtContent.value,
   threshold: 1,
@@ -98,8 +47,33 @@ onUnmounted(() => {
   observer.value?.disconnect()
 })
 
+// let lastActiveElement: Element | null = null
+
+// const updateId = (newId: string) => {
+//   // 移除上一個活動元素的高亮，如果有的話
+//   if (lastActiveElement) {
+//     lastActiveElement.classList.remove('toc-active')
+//     lastActiveElement.classList.add('dark:text-gray-100')
+//     // 取消對之前元素的觀察，然後重新觀察
+//     observer.value?.unobserve(lastActiveElement)
+//     observer.value?.observe(lastActiveElement)
+//   }
+
+//   // 更新當前活動元素
+//   activeTocId.value = newId
+//   const element = document.getElementById(`toc-${newId}`)
+//   if (element) {
+//     element.classList.add('toc-active')
+//     element.classList.remove('dark:text-gray-100')
+//     lastActiveElement = element
+//   }
+// }
+
 const updateId = (newId: string) => {
   activeTocId.value = newId
+  // const element = document.getElementById(`toc-${newId}`)
+  // element?.classList.add('toc-active')
+  // element?.classList.remove('dark:text-gray-100')
 }
 </script>
 
@@ -124,27 +98,6 @@ const updateId = (newId: string) => {
           </span>
         </div>
       </article>
-      <!-- <nav class="col-span-3 lg:mx-4 lg:px-4 lg:pt-20">
-        <div
-          class="sticky right-0 top-20 order-last hidden border-l border-l-gray-700 px-6 opacity-80 xl:inline-block"
-        >
-          <h2 class="mb-4 text-xl font-medium dark:text-gray-200">目錄</h2>
-          <ul class="space-y-2 dark:text-gray-100">
-            <li v-for="item in toc" :key="item.id">
-              <NuxtLink
-                class="line-clamp-1 font-medium uppercase"
-                :to="`#${item.id}`"
-                :class="{
-                  'text-emerald-600 dark:text-emerald-400': currentId === item.id
-                }"
-                @click="setActive(item.id)"
-              >
-                {{ item.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-      </nav> -->
       <div class="col-span-3 lg:mx-4 lg:pt-20">
         <div
           class="sticky right-0 top-20 order-last hidden border-l border-l-gray-700 px-6 opacity-80 xl:inline-block"
