@@ -47,33 +47,8 @@ onUnmounted(() => {
   observer.value?.disconnect()
 })
 
-// let lastActiveElement: Element | null = null
-
-// const updateId = (newId: string) => {
-//   // 移除上一個活動元素的高亮，如果有的話
-//   if (lastActiveElement) {
-//     lastActiveElement.classList.remove('toc-active')
-//     lastActiveElement.classList.add('dark:text-gray-100')
-//     // 取消對之前元素的觀察，然後重新觀察
-//     observer.value?.unobserve(lastActiveElement)
-//     observer.value?.observe(lastActiveElement)
-//   }
-
-//   // 更新當前活動元素
-//   activeTocId.value = newId
-//   const element = document.getElementById(`toc-${newId}`)
-//   if (element) {
-//     element.classList.add('toc-active')
-//     element.classList.remove('dark:text-gray-100')
-//     lastActiveElement = element
-//   }
-// }
-
 const updateId = (newId: string) => {
   activeTocId.value = newId
-  // const element = document.getElementById(`toc-${newId}`)
-  // element?.classList.add('toc-active')
-  // element?.classList.remove('dark:text-gray-100')
 }
 </script>
 

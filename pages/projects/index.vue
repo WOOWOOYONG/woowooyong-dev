@@ -16,7 +16,7 @@ const projectList = [
     imgName: 'island-cover.png',
     description: '內容訂閱平台，以心靈成長、療癒類文章為主',
     id: 1,
-    link: 'https://islandofhealing2023.rocket-coding.com/',
+    link: 'https://island-of-healing.vercel.app/',
     tags: ['Nuxt3', 'TypeScript', 'Pinia', 'Tailwind', 'Pusher']
   },
   {

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const route = useRoute()
 
+definePageMeta({
+  pageTransition: false
+})
+
 const category = computed(() => {
   return route.params.category
 })
@@ -54,5 +58,4 @@ const { data: notes } = await useAsyncData('category', () =>
     </section>
   </div>
 </template>
-
 <style scoped></style>
