@@ -1,4 +1,3 @@
-// 待理解
 export default {
   scrollBehavior(to, _, savedPosition) {
     const nuxtApp = useNuxtApp()
@@ -8,13 +7,13 @@ export default {
       return new Promise((resolve) => {
         nuxtApp.hooks.hookOnce('page:finish', () => {
           setTimeout(() => {
-            resolve(savedPosition), 50
-          })
+            resolve(savedPosition)
+          }, 50)
         })
       })
     }
 
-    // 目錄點擊，到你要的標題
+    // 點擊目錄標題
     if (to.hash) {
       setTimeout(() => {
         const heading = document.querySelector(to.hash)
@@ -24,7 +23,6 @@ export default {
           behavior: 'smooth'
         })
       })
-      return
     }
   }
 }
