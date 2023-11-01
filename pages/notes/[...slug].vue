@@ -17,7 +17,7 @@ const observer = ref<IntersectionObserver | null | undefined>(null)
 const observerOptions = reactive({
   root: nuxtContent.value,
   threshold: 1,
-  rootMargin: '0px 0px -100px 0px'
+  rootMargin: '0px 0px 0px 0px'
 })
 
 onMounted(() => {

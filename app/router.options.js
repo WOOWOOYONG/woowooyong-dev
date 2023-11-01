@@ -19,7 +19,7 @@ export default {
         const heading = document.querySelector(to.hash)
 
         return window.scrollTo({
-          top: heading.offsetTop,
+          top: heading.offsetTop - 80,
           behavior: 'smooth'
         })
       })
