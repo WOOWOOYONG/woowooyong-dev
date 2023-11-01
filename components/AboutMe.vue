@@ -19,7 +19,7 @@
                 />
               </NuxtLink>
             </div>
-            <p class="my-2 text-center text-xl font-semibold">歡迎來到我的基地！</p>
+            <p class="my-2 text-center text-xl font-medium">歡迎來到我的基地！</p>
           </div>
         </div>
         <div class="text-left text-lg">

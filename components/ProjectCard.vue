@@ -44,7 +44,7 @@ defineProps<{ projectList: ProjectInfo[] }>()
         <NuxtLink
           target="_blank"
           :to="project.link"
-          class="mb-4 block text-xl font-bold underline hover:text-indigo-900 dark:text-gray-100"
+          class="mb-4 block text-xl font-medium underline hover:text-indigo-900 dark:text-gray-100"
           >{{ project.name }}</NuxtLink
         >
 
