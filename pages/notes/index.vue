@@ -3,6 +3,9 @@
 // const { data: blogNav } = await useAsyncData('navigation', () => {
 //   return fetchContentNavigation(queryContent('/'))
 // })
+definePageMeta({
+  middleware: ['scroll']
+})
 
 useSeoMeta({
   title: 'WOOWOOYONG-我的筆記',
@@ -14,6 +17,7 @@ useSeoMeta({
 const { data: notesList } = await useAsyncData('notesList', () => {
   return queryContent('notes').sort({ date: -1 }).find()
 })
+console.log(notesList.value![0])
 </script>
 
 <template>
@@ -26,8 +30,8 @@ const { data: notesList } = await useAsyncData('notesList', () => {
       <div class="sm:col-span-7 xl:pr-52">
         <ul>
           <li
-            v-for="(note, index) in notesList"
-            :key="index"
+            v-for="note in notesList"
+            :key="note._path"
             class="my-8 border-b border-slate-600 py-4 dark:text-gray-200"
           >
             <NuxtLink
