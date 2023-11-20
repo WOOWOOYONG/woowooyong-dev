@@ -15,7 +15,7 @@ const getMyPoke = async () => {
 </script>
 
 <template>
-  <div class="rounded border border-gray-700 bg-slate-300 p-6">
+  <div class="rounded border border-gray-700 bg-slate-300 p-6 dark:bg-slate-500">
     <p class="m-0 font-bold">Container 元件</p>
     <div class="my-2 flex gap-4">
       <p class="m-0">取得API資料放入UI元件</p>

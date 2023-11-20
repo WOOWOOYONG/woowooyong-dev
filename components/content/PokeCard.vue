@@ -8,7 +8,7 @@ const { pokemon } = defineProps({
 </script>
 
 <template>
-  <div class="border border-gray-700 bg-gray-200 pb-20">
+  <div class="border border-gray-700 bg-gray-200 pb-20 dark:bg-slate-600">
     <p class="p-2 font-bold">UI-展示元件</p>
     <section v-if="pokemon.length > 0">
       <template v-for="poke in pokemon" :key="poke.id">
