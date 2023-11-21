@@ -17,7 +17,6 @@ useSeoMeta({
 const { data: notesList } = await useAsyncData('notesList', () => {
   return queryContent('notes').sort({ date: -1 }).find()
 })
-console.log(notesList.value![0])
 </script>
 
 <template>
