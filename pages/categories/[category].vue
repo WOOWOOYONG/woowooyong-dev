@@ -11,7 +11,7 @@ const category = route.params.category as string
 
 <template>
   <div>
-    <h2 class="title">關於 {{ route.params.category }} 的筆記</h2>
+    <h2 class="title">關於 {{ category }} 的筆記</h2>
     <section class="px-3 pb-24 sm:px-0 xl:grid xl:grid-cols-12">
       <aside class="pt-12 sm:col-span-3">
         <CategoryTag />
