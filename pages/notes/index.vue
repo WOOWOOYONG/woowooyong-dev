@@ -1,8 +1,4 @@
 <script setup lang="ts">
-// fetchContentNavigation 回傳值比較簡潔
-// const { data: blogNav } = await useAsyncData('navigation', () => {
-//   return fetchContentNavigation(queryContent('/'))
-// })
 definePageMeta({
   middleware: ['scroll']
 })
