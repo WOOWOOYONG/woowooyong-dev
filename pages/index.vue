@@ -1,7 +1,7 @@
 <script setup>
 useSeoMeta({
-  title: 'WOOWOOYONG',
-  ogTitle: 'WOOWOOYONG-個人網站',
+  title: 'WOOWOOYONG-開發基地',
+  ogTitle: 'WOOWOOYONG的開發基地',
   description: '歡迎來到我的開發基地',
   ogDescription: '歡迎來到我的開發基地'
 })
