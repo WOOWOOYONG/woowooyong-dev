@@ -135,6 +135,6 @@ watch(offset, (value, oldValue) => {
   opacity: 0;
 }
 .home-btn:hover::before {
-  @apply bg-emerald-400 opacity-100 dark:bg-emerald-600;
+  @apply bg-emerald-600 opacity-100 dark:bg-emerald-400;
 }
 </style>
