@@ -22,7 +22,7 @@ const observerOptions = reactive({
 onMounted(() => {
   observer.value = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      const id = entry.target.getAttribute('id') as string
+      const id = entry.target.getAttribute('id')
       const element = document.getElementById(`toc-${id}`)
       if (entry.isIntersecting) {
         element?.classList.add('toc-active')

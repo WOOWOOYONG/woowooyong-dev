@@ -8,9 +8,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/image'
   ],
-  image: {
-    format: ['webp']
-  },
   content: {
     highlight: {
       theme: {

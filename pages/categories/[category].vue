@@ -6,7 +6,7 @@ definePageMeta({
   key: (route) => route.fullPath
 })
 
-const category = route.params.category as string
+const category = route.params.category
 </script>
 
 <template>
@@ -66,7 +66,6 @@ const category = route.params.category as string
                 </li>
               </ul>
             </template>
-
             <!-- Not found slot to display message when no content us is found -->
             <template #not-found>
               <p>目前沒有文章</p>
