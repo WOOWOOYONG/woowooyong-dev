@@ -15,15 +15,15 @@ title: '小島聊癒所 - 管理員後台'
 
 **< 平台管理員 >**
 1. 審核新發表文章是否通過
-   ![demo-2](/images/projects/island-back/project2-2.png)
+   ![demo-2](/images/projects/islandback/project2-2.png)
 2. 審核使用者提出的成為作家申請是否通過
-   ![demo-1](/images/projects/island-back/project2-1.png)
+   ![demo-1](/images/projects/islandback/project2-1.png)
 3. 取消作家身分
 4. 新增/刪除精選文章
-   ![demo-3](/images/projects/island-back/project2-3.png)
+   ![demo-3](/images/projects/islandback/project2-3.png)
 5. 瀏覽平台前 20 名的熱門關鍵字
 6. 簽約作家費用單管理
-   ![demo-4](/images/projects/island-back/project2-4.png)
+   ![demo-4](/images/projects/islandback/project2-4.png)
 
 
 

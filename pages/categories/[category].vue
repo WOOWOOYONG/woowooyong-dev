@@ -68,7 +68,7 @@ const category = route.params.category
             </template>
             <!-- Not found slot to display message when no content us is found -->
             <template #not-found>
-              <p>目前沒有文章</p>
+              <p class="dark:text-gray-200">目前沒有文章</p>
             </template>
           </ContentList>
         </ClientOnly>
