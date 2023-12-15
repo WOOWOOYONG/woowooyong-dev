@@ -12,7 +12,7 @@ useSeoMeta({
 
 const projectList = [
   {
-    name: '小島聊癒所 / 療癒文章平台',
+    name: '小島聊癒所 / 療癒文章平台 - 前台',
     imgName: 'island-cover.png',
     description: '內容訂閱平台，以心靈成長、療癒類文章為主',
     id: 1,
@@ -20,10 +20,18 @@ const projectList = [
     tags: ['Nuxt3', 'TypeScript', 'Pinia', 'Tailwind', 'Pusher']
   },
   {
+    name: '小島聊癒所 - 管理員後台',
+    imgName: 'island-back-cover.png',
+    description: '管理文章、作家身份審核、作家費用單開立',
+    id: 2,
+    link: 'https://teamrocket12th.github.io/Island-Of-Healing-BackStage/#/',
+    tags: ['Vue3', 'TypeScript', 'Pinia', 'Tailwind']
+  },
+  {
     name: 'HouseHotel-旅館訂房',
     imgName: 'hotel-cover.png',
     description: '協作練習，使用V-Calendar串接API，提供房間預約服務',
-    id: 2,
+    id: 3,
     link: 'https://teamrocket12th.github.io/House-Hotel-Trio/#/',
     tags: ['Vue3', 'V-Calendar', 'Tailwind', 'Vee Validate', 'axios']
   },
@@ -31,7 +39,7 @@ const projectList = [
     name: 'WOWOROOM 床具電商平台',
     imgName: 'wowowroom-cover.png',
     description: '協作練習，購物車CRUD，使用BEM統一CSS命名規則',
-    id: 3,
+    id: 4,
     link: 'https://tsaaiiiii.github.io/WOWOROOM-OnlineShop/',
     tags: ['JavaScript', 'Sass', 'BEM', 'axios']
   },
@@ -39,7 +47,7 @@ const projectList = [
     name: 'My PokeDex',
     imgName: 'pokedex-cover.png',
     description: '練習使用TypeScript串接API，可依照地區分類瀏覽',
-    id: 4,
+    id: 5,
     link: 'https://woowooyong.github.io/Practice6-Pokedex/index.html',
     tags: ['TypeScript', 'PokeAPI', 'Lazy-Loading']
   }

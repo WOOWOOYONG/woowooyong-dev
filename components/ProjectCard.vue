@@ -23,7 +23,7 @@ defineProps<{ projectList: ProjectInfo[] }>()
           <NuxtImg
             format="webp"
             alt="project-cover"
-            :src="`/images/${project.imgName}`"
+            :src="`/images/projects/cover/${project.imgName}`"
             class="h-full w-full object-contain"
             fit="cover"
             quality="80"

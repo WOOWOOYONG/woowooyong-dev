@@ -1,34 +1,45 @@
 ---
-title: 'Pokemon 圖鑑'
+title: 'WOWOROOM床具電商平台'
 ---
-# My Pokemon 圖鑑
 
-![cover](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/dev/public/images/projects/project4-2.jpg)
+# WOWOROOM床具電商平台
+
+![cover](/images/projects/woworoom/project4-1.jpg)
 
 ## 簡介
-- 初期練習作品，使用JavaScript串接第三方API，自行加上選取地區的功能
-- 後來使用TypeScript重構，並練習圖片的Lazy Loading
-- 使用IntersectionObserver幫pokemon卡片加上動畫
+- 簡單的一頁式床具購物網站
+- 使用者可以選取想要的商品，並填寫資料送出訂單
+- 後台管理者可以管理訂單明細，並以圓餅圖呈現商品的營收比重
+
+
 
 
 ## 功能
-- 使用者可以查看指定地區的所有Pokemon資訊
+**前台使用者：**
+- 可以選取產品加入購物車
+- 可以送出訂購資料
 
-![demo-img](https://raw.githubusercontent.com/WOOWOOYONG/woowooyong-dev/dev/public/images/projects/project4-1.jpg)
+![demo-img1](/images/projects/woworoom/project4-3.jpg)
+![demo-img2](/images/projects/woworoom/project4-2.jpg)
+
+
+**後台管理者：**
+- 可以查看訂單明細
+- 可以更改訂單狀態和刪除訂單
+- 可以從圖表查看產品營收比重
+
+![demo-img3](/images/projects/woworoom/project4-4.jpg)
 
 ## 練習內容
-1. 依照地區分類
-2. Fetch API 練習
-3. 2022/10/30 新增 Pokemon card 資訊，背景顏色隨屬性改變
-4. 待研究: 雙屬性如何顯示 ＝> 2023/4/12 已修正
-5. 練習加入 ESLint，使用 Standard Style 規範程式碼
-
-2023/9/29更新
-1. 圖片Lazy Loading
-2. 練習改寫成TypeScript
-3. IntersectionObserver練習
+- 火箭隊協作作業（2人）
+- 購物車CRUD
+- 使用Github Flow進行協作
+- SASS BEM命名原則
+- 使用Sweetalert2提示訊息
+- 使用axios串接API
+- 使用C3.js圖表套件
 
 ## 相關連結
-- [Github Repo](https://github.com/WOOWOOYONG/Practice6-Pokedex)
-- [Demo](https://woowooyong.github.io/Practice6-Pokedex/)
-- [POKEAPI](https://pokeapi.co/)
+- [Github Repo](https://github.com/WOOWOOYONG/WOWOROOM-OnlineShop)
+- [Demo - 前台](https://tsaaiiiii.github.io/WOWOROOM-OnlineShop/)
+- [Demo - 後台](https://tsaaiiiii.github.io/WOWOROOM-OnlineShop/admin)

@@ -13,6 +13,8 @@ useSeoMeta({
 const { data: notesList } = await useAsyncData('notesList', () => {
   return queryContent('notes').sort({ date: -1 }).find()
 })
+
+const count = await queryContent('notes').count()
 </script>
 
 <template>
@@ -21,6 +23,7 @@ const { data: notesList } = await useAsyncData('notesList', () => {
     <section class="px-3 pb-24 xl:grid xl:grid-cols-12 xl:px-0">
       <aside class="pt-12 sm:col-span-3">
         <CategoryTag />
+        <p class="mt-10">目前共有 {{ count }} 篇筆記</p>
       </aside>
       <div class="sm:col-span-7 xl:pr-52">
         <ul>

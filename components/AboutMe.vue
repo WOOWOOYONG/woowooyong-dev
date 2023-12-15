@@ -17,12 +17,6 @@
             <h1 class="mb-2 text-center text-xl font-medium">YONG</h1>
             <div class="flex items-center justify-center gap-4">
               <p class="font-semibold text-gray-600 dark:text-gray-300">Front-End Developer</p>
-              <NuxtLink to="https://github.com/WOOWOOYONG" target="_blank">
-                <Icon
-                  name="carbon:logo-github"
-                  class="h-6 w-6 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200"
-                />
-              </NuxtLink>
             </div>
             <p class="my-2 text-center text-xl font-medium">歡迎來到我的基地！</p>
           </div>
