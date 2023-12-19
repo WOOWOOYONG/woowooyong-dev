@@ -16,7 +16,7 @@ const cardTransform = computed(() => {
 <template>
   <div>
     <section class="container flex flex-col items-center justify-center gap-3 pt-4">
-      <h2 class="mb-10 mt-8 text-center text-3xl font-medium dark:text-gray-200 md:mb-20">
+      <h2 class="fade-in mb-10 mt-8 text-center text-3xl font-medium dark:text-gray-200 md:mb-20">
         歡迎來到我的基地
       </h2>
       <div ref="myCard" class="card-shadow rounded-md" :style="{ transform: cardTransform }">
@@ -49,7 +49,7 @@ const cardTransform = computed(() => {
                 喜歡動手實作，享受累積經驗值升等的過程<br />
                 以成為前端工程師為目標努力中......
               </p>
-              <p class="">目前主要開發工具：Vue生態系</p>
+              <p>目前主要開發工具：Vue生態系</p>
             </div>
           </div>
         </div>
@@ -64,8 +64,16 @@ const cardTransform = computed(() => {
   transition: transform 0.5s ease;
   background-clip: padding-box;
 }
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
 
-.dark .card-shadow {
-  box-shadow: 0 4px 8px 3px #bcbcbc, 0 4px 15px 3px #b6b6b6;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>

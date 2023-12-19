@@ -38,7 +38,7 @@ title: '小島聊癒所 - 管理員後台'
 - 對於平台簽約作家，可以在此開立分潤稿費，作家可以在前台的個人選單中看到收入
   ![demo-4](/images/projects/Islandback/project2-4.png)
 
-## 使用工具
+## 使用技術
 
 - Vue3
 - TypeScript
