@@ -16,41 +16,41 @@ const cardTransform = computed(() => {
 <template>
   <div>
     <section class="container flex flex-col items-center justify-center gap-3 pt-4">
-      <h2 class="my-2 text-center text-2xl font-medium dark:text-gray-200">歡迎來到我的基地</h2>
-      <div
-        class="card-shadhow overflow-hidden rounded-md border-8 border-zinc-300 bg-zinc-300 dark:border-stone-400 dark:bg-stone-400"
-        :style="{ transform: cardTransform }"
-      >
+      <h2 class="fade-in mb-10 mt-8 text-center text-3xl font-medium dark:text-gray-200 md:mb-20">
+        歡迎來到我的基地
+      </h2>
+      <div ref="myCard" class="card-shadow rounded-md" :style="{ transform: cardTransform }">
         <div
-          ref="myCard"
-          class="personal-card rounded-md bg-slate-100 p-6 dark:bg-slate-700 dark:text-gray-200"
+          class="personal-card rounded-md bg-[#f7f7f7] px-3 py-3 dark:bg-[#101722] dark:text-gray-200 md:flex-row md:px-10"
         >
-          <div class="mb-10 flex flex-col items-center gap-4">
-            <ul class="flex w-full items-center justify-end gap-2">
-              <li>
-                <NuxtImg format="webp" src="/icons/tailwind.svg" alt="vue-icon" class="w-10" />
-              </li>
-              <li><NuxtImg format="webp" src="/icons/nuxt.svg" alt="vue-icon" class="w-10" /></li>
-              <li><NuxtImg format="webp" src="/icons/vue.svg" alt="vue-icon" class="w-8" /></li>
-            </ul>
-            <div>
-              <NuxtImg format="webp" src="/Me.jpg" alt="avatar" class="h-40 w-40 rounded-full" />
-            </div>
-            <div>
-              <h1 class="mb-2 text-center text-xl font-medium">YONG</h1>
-              <div class="flex items-center justify-center gap-4">
-                <p class="font-semibold text-gray-600 dark:text-gray-200">Front-End Developer</p>
+          <ul class="flex w-full items-center justify-end gap-2">
+            <li>
+              <NuxtImg format="webp" src="/icons/tailwind.svg" alt="tailwind-icon" class="w-10" />
+            </li>
+            <li><NuxtImg format="webp" src="/icons/nuxt.svg" alt="nuxt-icon" class="w-10" /></li>
+            <li><NuxtImg format="webp" src="/icons/vue.svg" alt="vue-icon" class="w-8" /></li>
+          </ul>
+          <div class="flex flex-col items-center gap-2 md:flex-row md:gap-8">
+            <div class="mb-4 flex flex-col items-center gap-4 md:mb-10">
+              <div>
+                <NuxtImg format="webp" src="/Me.jpg" alt="avatar" class="h-36 w-36 rounded-full" />
+              </div>
+              <div>
+                <h1 class="mb-2 text-center text-xl font-medium">YONG</h1>
+                <div class="flex items-center justify-center gap-4">
+                  <p class="font-semibold text-gray-600 dark:text-gray-200">Front-End Developer</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="text-left text-lg">
-            <p class="mb-2">關於我：</p>
-            <p class="mb-4 leading-8">
-              嚮往DIY的生活方式．樂於研究及探索新技術<br />
-              喜歡動手實作，注重細節，享受累積經驗值升等的過程<br />
-              以成為前端工程師為目標努力中......
-            </p>
-            <p class="">目前主要開發工具：Vue生態系</p>
+            <div class="text-left text-lg">
+              <p class="mb-2">關於我：</p>
+              <p class="mb-4 leading-8">
+                嚮往DIY的生活方式．樂於研究及探索新技術<br />
+                喜歡動手實作，享受累積經驗值升等的過程<br />
+                以成為前端工程師為目標努力中......
+              </p>
+              <p>目前主要開發工具：Vue生態系</p>
+            </div>
           </div>
         </div>
       </div>
@@ -59,9 +59,21 @@ const cardTransform = computed(() => {
 </template>
 
 <style scoped>
-.card-shadhow {
-  box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+.card-shadow {
+  box-shadow: 0 4px 12px 3px rgb(150, 150, 150), 0 4px 15px 3px #fcfdfe;
   transition: transform 0.5s ease;
   background-clip: padding-box;
+}
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>

@@ -12,6 +12,14 @@ useSeoMeta({
 
 const projectList = [
   {
+    name: '高雄市民服務平台｜便民一路通',
+    imgName: 'kgo-cover.png',
+    description: '高雄市政府服務入口網站',
+    id: 0,
+    link: '',
+    tags: ['Nuxt2', 'Vue2', 'Vuex', 'Bootstrap5', 'jquery']
+  },
+  {
     name: '小島聊癒所 / 療癒文章平台 - 前台',
     imgName: 'island-cover.png',
     description: '內容訂閱平台，以心靈成長、療癒類文章為主',
