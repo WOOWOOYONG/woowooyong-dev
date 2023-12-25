@@ -8,6 +8,13 @@ definePageMeta({
   middleware: ['scroll']
 })
 
+useSeoMeta({
+  title: data.value?.title,
+  ogTitle: data.value?.title,
+  description: data.value?.description,
+  ogDescription: data.value?.description
+})
+
 // 目錄
 const activeTocId = ref<string | null>(null)
 const nuxtContent = ref(null)
