@@ -6,8 +6,8 @@ definePageMeta({
 useSeoMeta({
   title: 'WOOWOOYONG-我的筆記',
   ogTitle: 'WOOWOOYONG-我的筆記',
-  description: '存放一些心得筆記',
-  ogDescription: '存放一些心得筆記'
+  description: '我的一些心得筆記',
+  ogDescription: '我的一些心得筆記'
 })
 
 const { data: notesList } = await useAsyncData('notesList', () => {

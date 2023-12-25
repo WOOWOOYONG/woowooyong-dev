@@ -11,7 +11,9 @@ const { data, pending } = await useLazyAsyncData(`content-${path}`, () => {
 
 useSeoMeta({
   title: data.value?.title,
-  ogTitle: data.value?.title
+  ogTitle: data.value?.title,
+  description: data.value?.description,
+  ogDescription: data.value?.description
 })
 </script>
 
