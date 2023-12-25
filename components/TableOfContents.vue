@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = withDefaults(defineProps<{ activeTocId: string }>(), {})
+const props = withDefaults(defineProps<{ activeTocId: string | null }>(), {})
 
 const router = useRouter()
 const { path } = useRoute()
@@ -50,7 +50,12 @@ watchDebounced(
         :id="`toc-${id}`"
         :key="id"
         ref="tocLinksH2"
-        class="mb-2 ml-0 cursor-pointer list-none last:mb-0 dark:text-gray-100"
+        class="mb-2 ml-0 cursor-pointer list-none last:mb-0"
+        :class="
+          id === activeTocId
+            ? 'font-bold text-emerald-600 dark:text-emerald-400'
+            : 'dark:text-gray-100'
+        "
         @click="onClick(id)"
       >
         {{ text }}

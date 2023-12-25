@@ -9,27 +9,22 @@ definePageMeta({
 })
 
 // 目錄
-const activeTocId = ref<string>('')
+const activeTocId = ref<string | null>(null)
 const nuxtContent = ref(null)
 
 const observer = ref<IntersectionObserver | null | undefined>(null)
 const observerOptions = reactive({
   root: nuxtContent.value,
   threshold: 1,
-  rootMargin: '0px 0px 0px 0px'
+  rootMargin: '0px 0px -350px 0px'
 })
 
 onMounted(() => {
   observer.value = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      const id = entry.target.getAttribute('id')
-      const element = document.getElementById(`toc-${id}`)
+      const id: string | null = entry.target.getAttribute('id')
       if (entry.isIntersecting) {
-        element?.classList.add('toc-active')
-        element?.classList.remove('dark:text-gray-100')
-      } else {
-        element?.classList.remove('toc-active')
-        element?.classList.add('dark:text-gray-100')
+        activeTocId.value = id
       }
     })
   }, observerOptions)
@@ -53,7 +48,7 @@ const updateId = (newId: string) => {
 
 <template>
   <section
-    class="h-fit flex-col-reverse items-start justify-center gap-16 pb-24 pt-12 xl:flex xl:flex-row"
+    class="h-fit flex-col-reverse items-start justify-center gap-16 pb-28 pt-12 xl:flex xl:flex-row"
   >
     <div v-if="data" class="grid-cols-12 xl:grid">
       <article class="article col-span-9">
