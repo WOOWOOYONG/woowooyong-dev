@@ -7,6 +7,12 @@ definePageMeta({
 })
 
 const category = route.params.category
+useSeoMeta({
+  title: `關於 ${category} 的筆記`,
+  ogTitle: `關於 ${category} 的筆記`,
+  description: '我的一些心得筆記',
+  ogDescription: '我的一些心得筆記'
+})
 </script>
 
 <template>

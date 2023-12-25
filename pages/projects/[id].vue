@@ -8,6 +8,13 @@ const { path } = useRoute()
 const { data, pending } = await useLazyAsyncData(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne()
 })
+
+useSeoMeta({
+  title: data.value?.title,
+  ogTitle: data.value?.title,
+  description: data.value?.description,
+  ogDescription: data.value?.description
+})
 </script>
 
 <template>

@@ -44,7 +44,19 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       link: [{ rel: 'icon', type: 'image/png', href: '/devlogo.png' }],
-      title: 'WOOWOOYONG - Dev'
+      title: 'WOOWOOYONG - Dev',
+      meta: [
+        {
+          name: 'description',
+          content: '我的開發基地'
+        },
+        { property: 'og:title', content: 'WOOWOOYONG - Dev' },
+        { property: 'og:url', content: 'https://woowooyong-dev.vercel.app/' },
+        {
+          property: 'og:image',
+          content: '/devlogo.png'
+        }
+      ]
     },
     pageTransition: { name: 'page', mode: 'out-in' }
   }
