@@ -14,7 +14,7 @@ const { data, pending } = await useLazyAsyncData(`content-${path}`, () => {
   <div>
     <main>
       <LoadingItem v-if="pending" />
-      <article v-if="data" class="pb-24 pt-12">
+      <article v-else class="pb-24 pt-12">
         <ContentRenderer
           ref="nuxtContent"
           :value="data!"
