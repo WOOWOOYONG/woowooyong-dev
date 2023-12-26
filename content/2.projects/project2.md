@@ -16,28 +16,34 @@ description: '我的專案介紹'
 1. **審核新發表文章**
 
 - 前台使用者（作家）撰寫完文章後，可以在這裡審核是否發佈到前台網站上
-  ![demo-2](/images/projects/Islandback/project2-2.png)
+  ::MdImg{img-src= "/images/projects/Islandback/project2-2.png"}
+  ::
 
 2. **審核使用者提出的成為作家申請**
 
 - 前台使用者（一般）提出作家申請後，在這裡審核是否通過
-  ![demo-1](/images/projects/Islandback/project2-1.png)
+  ::MdImg{img-src= "/images/projects/Islandback/project2-1.png"}
+  ::
 
 3. **取消作家身分**
 
-- 已經是作家的使用者，可以在這裡撤銷作家身份
-- ![demo-5](/images/projects/cover/island-back-cover.png)
+- 可以在這裡撤銷使用者的作家身份
+  ::MdImg{img-src= "/images/projects/cover/island-back-cover.png"}
+  ::
 
 4. **新增/刪除精選文章**
 
 - 可以在已發佈的文章編輯精選文章，顯示到前台精選文章區塊
-  ![demo-3](/images/projects/Islandback/project2-3.png)
+  ::MdImg{img-src= "/images/projects/Islandback/project2-3.png"}
+  ::
 
 5. **瀏覽平台前 20 名的熱門關鍵字**
 6. **簽約作家費用單管理**
 
 - 對於平台簽約作家，可以在此開立分潤稿費，作家可以在前台的個人選單中看到收入
-  ![demo-4](/images/projects/Islandback/project2-4.png)
+
+  ::MdImg{img-src= "/images/projects/Islandback/project2-4.png"}
+  ::
 
 ## 使用技術
 
@@ -48,7 +54,7 @@ description: '我的專案介紹'
 
 ## 相關連結
 
-- [Demo - 前台](https://islandofhealing2023.rocket-coding.com/)
+- [Demo - 前台](https://island-of-healing.vercel.app/)
 - [Demo - 後台](https://teamrocket12th.github.io/Island-Of-Healing-BackStage/#/)
 - [Github Repo - 前台](https://github.com/TeamRocket12th/Island-of-Healing)
 - [Github Repo - 後台](https://github.com/TeamRocket12th/Island-Of-Healing-BackStage)

@@ -5,7 +5,8 @@ description: '我的專案介紹'
 
 # WOWOROOM 床具電商平台
 
-![cover](/images/projects/woworoom/project4-1.jpg)
+::MdImg{img-src= "/images/projects/woworoom/project4-1.jpg"}
+::
 
 ## 簡介
 
@@ -20,8 +21,10 @@ description: '我的專案介紹'
 - 可以選取產品加入購物車
 - 可以送出訂購資料
 
-![demo-img1](/images/projects/woworoom/project4-3.jpg)
-![demo-img2](/images/projects/woworoom/project4-2.jpg)
+::MdImg{img-src= "/images/projects/woworoom/project4-3.jpg"}
+::
+::MdImg{img-src= "/images/projects/woworoom/project4-2.jpg"}
+::
 
 **後台管理者：**
 
@@ -29,7 +32,8 @@ description: '我的專案介紹'
 - 可以更改訂單狀態和刪除訂單
 - 可以從圖表查看產品營收比重
 
-![demo-img3](/images/projects/woworoom/project4-4.jpg)
+::MdImg{img-src= "/images/projects/woworoom/project4-4.jpg"}
+::
 
 ## 練習內容
 

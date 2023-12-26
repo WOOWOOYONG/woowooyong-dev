@@ -5,7 +5,8 @@ description: '我的專案介紹'
 
 # My Pokemon 圖鑑
 
-![cover](/images/projects/pokedex/project5-2.jpg)
+::MdImg{img-src= "/images/projects/pokedex/project5-2.jpg"}
+::
 
 ## 簡介
 
@@ -17,7 +18,8 @@ description: '我的專案介紹'
 
 - 使用者可以查看指定地區的所有 Pokemon 資訊
 
-![demo-img](/images/projects/pokedex/project5-1.jpg)
+::MdImg{img-src= "/images/projects/pokedex/project5-1.jpg"}
+::
 
 ## 練習內容
 

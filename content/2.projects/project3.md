@@ -5,7 +5,8 @@ description: '我的專案介紹'
 
 # House-Hotel 旅館預約服務
 
-![cover](/images/projects/cover/hotel-cover.png)
+::MdImg{img-src= "/images/projects/cover/hotel-cover.png"}
+::
 
 ## 簡介
 
@@ -20,8 +21,10 @@ description: '我的專案介紹'
 - 可以線上訂房，只能預約未來 90 天內的時段
 - 預約成功 / 失敗，會回傳對應的通知
 
-![deom-img1](/images/projects/househotel/project3-1.jpg)
-![deom-img2](/images/projects/househotel/project3-2.jpg)
+::MdImg{img-src= "/images/projects/househotel/project3-1.jpg"}
+::
+::MdImg{img-src= "/images/projects/househotel/project3-2.jpg"}
+::
 
 ## 練習內容
 
