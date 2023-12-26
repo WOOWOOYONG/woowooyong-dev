@@ -5,7 +5,8 @@ description: '我的專案介紹'
 
 # 小島聊癒所 | 療癒文章平台
 
-![cover](/images/projects/cover/island-cover.png)
+::MdImg{img-src= "/images/projects/cover/island-cover.png"}
+::
 
 ## 簡介
 
