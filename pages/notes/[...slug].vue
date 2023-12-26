@@ -23,17 +23,39 @@ const observer = ref<IntersectionObserver | null | undefined>(null)
 const observerOptions = reactive({
   root: nuxtContent.value,
   threshold: 1,
-  rootMargin: '0px 0px -350px 0px'
+  rootMargin: '0px 0px 0px 0px'
 })
 
 onMounted(() => {
+  // 儲存目錄標題ID和與頂部的位置
+  const observedHeights = new Map()
+
   observer.value = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const id: string | null = entry.target.getAttribute('id')
-      if (entry.isIntersecting) {
-        activeTocId.value = id
+      if (id) {
+        const rect = entry.target.getBoundingClientRect()
+        if (entry.isIntersecting) {
+          observedHeights.set(id, rect.top)
+        } else {
+          observedHeights.delete(id)
+        }
       }
     })
+    let atBottom = false
+    // 检查是否滚动到底部
+    atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight
+
+    if (observedHeights.size > 0) {
+      let activeId
+      console.log(observedHeights)
+      if (atBottom) {
+        activeId = Array.from(observedHeights.keys()).pop()
+      } else {
+        activeId = [...observedHeights.entries()].reduce((a, b) => (a[1] < b[1] ? a : b))[0]
+      }
+      activeTocId.value = activeId
+    }
   }, observerOptions)
 
   setTimeout(() => {
