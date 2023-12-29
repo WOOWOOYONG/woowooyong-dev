@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   ],
   gtag: {
     id: process.env.NUXT_PUBLIC_GATG_ID,
-    loadingStrategy: 'async'
+    loadingStrategy: 'defer'
   },
   content: {
     highlight: {
