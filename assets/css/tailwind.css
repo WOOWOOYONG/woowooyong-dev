@@ -4,7 +4,7 @@
 
 @layer base {
   code {
-    @apply rounded-sm bg-gray-300 px-2 dark:bg-gray-800 dark:text-red-400;
+    @apply rounded bg-gray-300 px-2 py-1 dark:bg-gray-900 dark:text-orange-300;
   }
 }
 

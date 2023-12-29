@@ -48,7 +48,7 @@ watch(offset, (value, oldValue) => {
         <div
           class="container flex items-center justify-between gap-4 px-10 py-2 text-gray-600 lg:py-4"
         >
-          <NuxtLink to="/" class="home-btn relative font-bold">
+          <NuxtLink to="/" class="home-btn relative font-bold" title="home">
             <Icon
               name="heroicons-outline:home"
               class="h-6 w-6 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200"
@@ -68,7 +68,7 @@ watch(offset, (value, oldValue) => {
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="https://github.com/WOOWOOYONG" target="_blank">
+                  <NuxtLink to="https://github.com/WOOWOOYONG" target="_blank" title="GitHub">
                     <Icon
                       name="carbon:logo-github"
                       class="h-6 w-6 text-gray-600 hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400"
@@ -83,7 +83,12 @@ watch(offset, (value, oldValue) => {
           </ClientOnly>
           <!-- Hamburger Button for Mobile -->
           <div v-if="!isDesktop">
-            <NuxtLink to="https://github.com/WOOWOOYONG" target="_blank" class="mr-4">
+            <NuxtLink
+              to="https://github.com/WOOWOOYONG"
+              target="_blank"
+              class="mr-4"
+              title="GitHub"
+            >
               <Icon
                 name="carbon:logo-github"
                 class="h-6 w-6 text-gray-600 hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400"

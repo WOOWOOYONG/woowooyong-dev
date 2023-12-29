@@ -23,17 +23,24 @@ const cardTransform = computed(() => {
         <div
           class="personal-card rounded-md bg-[#f7f7f7] px-3 py-3 dark:bg-[#101722] dark:text-gray-200 md:flex-row md:px-10"
         >
-          <ul class="flex w-full items-center justify-end gap-2">
+          <ul class="mb-4 flex w-full items-center justify-end gap-2">
             <li>
-              <NuxtImg format="webp" src="/icons/tailwind.svg" alt="tailwind-icon" class="w-10" />
+              <NuxtImg format="webp" src="/icons/tailwind.svg" alt="tailwind-icon" width="40" />
             </li>
-            <li><NuxtImg format="webp" src="/icons/nuxt.svg" alt="nuxt-icon" class="w-10" /></li>
-            <li><NuxtImg format="webp" src="/icons/vue.svg" alt="vue-icon" class="w-8" /></li>
+            <li><NuxtImg format="webp" src="/icons/nuxt.svg" alt="nuxt-icon" width="40" /></li>
+            <li><NuxtImg format="webp" src="/icons/vue.svg" alt="vue-icon" width="30" /></li>
           </ul>
           <div class="flex flex-col items-center gap-2 md:flex-row md:gap-8">
             <div class="mb-4 flex flex-col items-center gap-4 md:mb-10">
               <div>
-                <NuxtImg format="webp" src="/Me.jpg" alt="avatar" class="h-36 w-36 rounded-full" />
+                <NuxtImg
+                  format="webp"
+                  src="/Me.jpg"
+                  alt="avatar"
+                  class="rounded-full"
+                  width="140"
+                  height="140"
+                />
               </div>
               <div>
                 <h1 class="mb-2 text-center text-xl font-medium">YONG</h1>
