@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const categories = ['Nuxt', 'Vue', 'Web', 'JavaScript', 'TypeScript', 'Alogorithm']
+const categories = ['Nuxt', 'Vue', 'Web', 'CSS', 'JavaScript', 'TypeScript', 'Alogorithm']
 </script>
 
 <template>
