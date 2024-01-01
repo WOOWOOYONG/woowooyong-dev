@@ -36,6 +36,7 @@ defineProps<{ projectList: ProjectInfo[] }>()
             <NuxtLink
               :to="`/projects/project${project.id}`"
               class="rounded-lg bg-gray-800 p-2 text-white"
+              title="專案內容"
             >
               Read More
             </NuxtLink>
@@ -48,6 +49,7 @@ defineProps<{ projectList: ProjectInfo[] }>()
           target="_blank"
           :to="project.link"
           class="mb-4 block text-xl font-medium underline hover:text-indigo-900 dark:text-gray-100"
+          :title="project.name"
           >{{ project.name }}</NuxtLink
         >
 
