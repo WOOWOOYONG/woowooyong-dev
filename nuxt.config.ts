@@ -6,13 +6,8 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
-    '@nuxt/image',
-    'nuxt-gtag'
+    '@nuxt/image'
   ],
-  gtag: {
-    id: process.env.NUXT_PUBLIC_GATG_ID,
-    loadingStrategy: 'defer'
-  },
   content: {
     highlight: {
       theme: {
