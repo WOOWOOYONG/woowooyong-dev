@@ -1,8 +1,17 @@
 <script setup lang="ts">
-const props = withDefaults(defineProps<{ activeTocId: string | null }>(), {})
+const props = defineProps({
+  activeTocId: {
+    type: String as PropType<string | null>,
+    default: null
+  },
+  blogPost: {
+    type: Object as PropType<any>,
+    default: () => ({}),
+    required: true
+  }
+})
 
 const router = useRouter()
-const { path } = useRoute()
 const emits = defineEmits(['updateActiveId'])
 
 const sliderHeight = useState('sliderHeight', () => 0)
@@ -10,10 +19,7 @@ const sliderTop = useState('sliderTop', () => 0)
 const tocLinksH2: Ref<Array<HTMLElement>> = ref([])
 const tocLinksH3: Ref<Array<HTMLElement>> = ref([])
 
-const { data: blogPost } = await useAsyncData(`blogToc`, () => {
-  return queryContent().where({ _path: path }).findOne()
-})
-const tocLinks = computed(() => blogPost.value?.body.toc!.links ?? [])
+const tocLinks = computed(() => props.blogPost.body.toc!.links ?? [])
 
 const onClick = (id: string) => {
   const el = document.getElementById(id)

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { path } = useRoute()
 const { data } = await useAsyncData(`content-${path}`, () => {
-  return queryContent().where({ _path: path }).findOne()
+  return queryContent(path).findOne()
 })
 
 definePageMeta({
@@ -79,7 +79,11 @@ const updateId = (newId: string) => {
           class="sticky right-0 top-20 order-last hidden border-l border-l-gray-700 px-6 opacity-80 xl:inline-block"
         >
           <h2 class="mb-4 text-lg font-medium dark:text-gray-200">目錄</h2>
-          <TableOfContents :active-toc-id="activeTocId!" @update-active-id="updateId" />
+          <TableOfContents
+            :active-toc-id="activeTocId!"
+            :blog-post="data"
+            @update-active-id="updateId"
+          />
         </div>
       </div>
     </div>

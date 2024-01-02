@@ -7,6 +7,7 @@ specifiers:
   '@nuxt/image': 1.0.0-rc.3
   '@nuxtjs/color-mode': ^3.3.0
   '@nuxtjs/eslint-config-typescript': ^12.1.0
+  '@nuxtjs/partytown': ^1.4.0
   '@nuxtjs/tailwindcss': ^6.8.0
   '@tailwindcss/typography': ^0.5.9
   '@vueuse/nuxt': ^10.4.1
@@ -15,7 +16,6 @@ specifiers:
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-vue: ^9.14.1
   nuxt: ^3.7.0
-  nuxt-gtag: ^1.1.2
   nuxt-icon: ^0.5.0
   prettier: ^2.8.8
   prettier-plugin-tailwindcss: ^0.3.0
@@ -32,6 +32,7 @@ devDependencies:
   '@nuxt/devtools': 1.0.6_nuxt@3.7.4
   '@nuxtjs/color-mode': 3.3.0
   '@nuxtjs/eslint-config-typescript': 12.1.0_jk7qbkaijtltyu4ajmze3dfiwa
+  '@nuxtjs/partytown': 1.4.0
   '@nuxtjs/tailwindcss': 6.8.0
   '@tailwindcss/typography': 0.5.10_tailwindcss@3.3.3
   '@vueuse/nuxt': 10.4.1_nuxt@3.7.4
@@ -40,7 +41,6 @@ devDependencies:
   eslint-plugin-prettier: 4.2.1_d6cwdqxrjnbhsgunflrlslm2um
   eslint-plugin-vue: 9.17.0_eslint@8.50.0
   nuxt: 3.7.4_ocweparw4lsvukbhp66wru7hla
-  nuxt-gtag: 1.1.2
   nuxt-icon: 0.5.0
   prettier: 2.8.8
   prettier-plugin-tailwindcss: 0.3.0_prettier@2.8.8
@@ -404,6 +404,12 @@ packages:
       '@babel/helper-string-parser': 7.23.4
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
+    dev: true
+
+  /@builder.io/partytown/0.8.1:
+    resolution: {integrity: sha512-p4xhEtQCPe8YFJ8e7KT9RptnT+f4lvtbmXymbp1t0bLp+USkNMTxrRMNc3Dlr2w2fpxyX7uA0CyAeU3ju84O4A==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
     dev: true
 
   /@cloudflare/kv-asset-handler/0.3.0:
@@ -1298,7 +1304,7 @@ packages:
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
       '@npmcli/promise-spawn': 7.0.0
-      lru-cache: 10.0.1
+      lru-cache: 10.1.0
       npm-pick-manifest: 9.0.0
       proc-log: 3.0.0
       promise-inflight: 1.0.1
@@ -1807,6 +1813,19 @@ packages:
       - rollup
       - supports-color
     dev: false
+
+  /@nuxtjs/partytown/1.4.0:
+    resolution: {integrity: sha512-CtKlVXpUEUmRzMHU1a9a1nD0sNV9yc/ztX03WM3KdfpFpnHrbURTNn6jblauwt9uMPlDbrWA5HGK9I1rWVJ77w==}
+    dependencies:
+      '@builder.io/partytown': 0.8.1
+      '@nuxt/kit': 3.9.0
+      knitwork: 1.0.0
+      serve-static: 1.15.0
+      ufo: 1.3.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
 
   /@nuxtjs/tailwindcss/6.8.0:
     resolution: {integrity: sha512-jzuvD1nfA2BPnSbHtKK0aiI51ndMa7lNGL1iDEFuEPsltzilZ9ED7zOP6niGTrImg0n5Yt4GEJpixi6yWwp9Hw==}
@@ -3565,7 +3584,7 @@ packages:
       '@npmcli/fs': 3.1.0
       fs-minipass: 3.0.3
       glob: 10.3.10
-      lru-cache: 10.0.1
+      lru-cache: 10.1.0
       minipass: 7.0.4
       minipass-collect: 1.0.2
       minipass-flush: 1.0.5
@@ -5558,8 +5577,7 @@ packages:
       radix3: 1.1.0
       ufo: 1.3.2
       uncrypto: 0.1.3
-      unenv: 1.7.4
-    dev: true
+      unenv: 1.8.0
 
   /has-bigints/1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
@@ -5782,7 +5800,7 @@ packages:
     resolution: {integrity: sha512-+K84LB1DYwMHoHSgaOY/Jfhw3ucPmSET5v98Ke/HdNSw4a0UktWzyW1mjhjpuxxTqOOsfWT/7iVshHmVZ4IpOA==}
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
-      lru-cache: 10.0.1
+      lru-cache: 10.1.0
     dev: true
 
   /html-tags/3.3.1:
@@ -6033,15 +6051,15 @@ packages:
       citty: 0.1.4
       consola: 3.2.3
       defu: 6.1.3
-      destr: 2.0.1
+      destr: 2.0.2
       etag: 1.8.1
-      h3: 1.8.2
+      h3: 1.9.0
       image-meta: 0.1.1
       listhen: 1.5.5
       ofetch: 1.3.3
       pathe: 1.1.1
       sharp: 0.32.6
-      ufo: 1.3.1
+      ufo: 1.3.2
       unstorage: 1.9.0
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -6068,7 +6086,6 @@ packages:
 
   /iron-webcrypto/1.0.0:
     resolution: {integrity: sha512-anOK1Mktt8U1Xi7fCM3RELTuYbnFikQY5VtrDj7kPgpejV7d43tWKhzgioO0zpkazLEL/j/iayRqnJhrGfqUsg==}
-    dev: true
 
   /is-absolute-url/4.0.1:
     resolution: {integrity: sha512-/51/TKE88Lmm7Gc4/8btclNXWS+g50wXhYJq8HWIBAGUBnoAdRu1aXeh364t/O7wXDAcTJDP8PNuNKWUDWie+A==}
@@ -7883,7 +7900,6 @@ packages:
 
   /node-fetch-native/1.6.1:
     resolution: {integrity: sha512-bW9T/uJDPAJB2YNYEpWzE54U5O3MQidXsOyTfnbKYtTtFexRvGzb1waphBN4ZwP6EcIvYYEOwW0b72BpAqydTw==}
-    dev: true
 
   /node-fetch/2.7.0:
     resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
@@ -8078,17 +8094,6 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.3
-    dev: true
-
-  /nuxt-gtag/1.1.2:
-    resolution: {integrity: sha512-+gStu6D7RuKnYtmaeYlV+AYmqpNEk8sfv6XRL4hVMK0DSe1GnpPi3rVyx/R5WF8xe2xJl8/CTtgrE25CIOQsHQ==}
-    dependencies:
-      '@nuxt/kit': 3.9.0
-      defu: 6.1.3
-      pathe: 1.1.1
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
     dev: true
 
   /nuxt-icon/0.5.0:
@@ -9445,7 +9450,7 @@ packages:
       micromark-util-character: 2.0.1
       micromark-util-types: 2.0.0
       parse-entities: 4.0.1
-      scule: 1.0.0
+      scule: 1.1.1
       stringify-entities: 4.0.3
       unified: 11.0.3
       unist-util-visit: 5.0.0
@@ -10588,7 +10593,6 @@ packages:
       mime: 3.0.0
       node-fetch-native: 1.6.1
       pathe: 1.1.1
-    dev: true
 
   /unhead/1.7.4:
     resolution: {integrity: sha512-oOv+9aQS85DQUd0f1uJBtb2uG3SKwCURSTuUWp9WKKzANCb1TjW2dWp5TFmJH5ILF6urXi4uUQfjK+SawzBJAA==}
@@ -11170,7 +11174,7 @@ packages:
       '@rollup/pluginutils': 5.1.0
       debug: 4.3.4
       error-stack-parser-es: 0.1.1
-      fs-extra: 11.1.1
+      fs-extra: 11.2.0
       open: 9.1.0
       picocolors: 1.0.0
       sirv: 2.0.3
@@ -11192,7 +11196,7 @@ packages:
       '@vue/babel-plugin-jsx': 1.1.5_@babel+core@7.23.0
       '@vue/compiler-dom': 3.3.4
       kolorist: 1.8.0
-      magic-string: 0.30.4
+      magic-string: 0.30.5
     transitivePeerDependencies:
       - supports-color
     dev: true
