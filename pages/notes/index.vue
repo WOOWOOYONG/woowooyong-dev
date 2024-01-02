@@ -15,7 +15,10 @@ const displayRange = ref({
 })
 
 const { data: notesList } = await useAsyncData('notesList', () => {
-  return queryContent('notes').sort({ date: -1 }).find()
+  return queryContent('notes')
+    .only(['title', 'description', 'date', 'tags', '_path'])
+    .sort({ date: -1 })
+    .find()
 })
 
 const loadMore = () => {
