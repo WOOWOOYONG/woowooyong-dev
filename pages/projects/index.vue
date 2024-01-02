@@ -16,7 +16,7 @@ const projectList = [
     imgName: 'kgo-cover.png',
     description: '高雄市政府服務入口網站',
     id: 0,
-    link: '',
+    link: '#',
     tags: ['Nuxt2', 'Vue2', 'Vuex', 'Bootstrap5', 'jquery']
   },
   {

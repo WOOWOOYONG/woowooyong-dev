@@ -46,7 +46,7 @@ watch(offset, (value, oldValue) => {
     <ClientOnly>
       <nav class="shadow-sm">
         <div
-          class="container flex items-center justify-between gap-4 px-10 py-2 text-gray-600 lg:py-4"
+          class="container flex items-center justify-between gap-4 px-4 py-2 text-gray-600 sm:px-10 lg:py-4"
         >
           <NuxtLink to="/" class="home-btn relative font-bold" title="home">
             <Icon
@@ -95,7 +95,7 @@ watch(offset, (value, oldValue) => {
               />
             </NuxtLink>
             <ThemeBtn />
-            <button class="ml-6 p-2" type="button" @click="toggleMenu">
+            <button class="ml-6 p-2" type="button" title="toggleButton" @click="toggleMenu">
               <Icon name="ri:menu-5-fill" size="24" class="dark:text-gray-300" />
             </button>
           </div>

@@ -19,24 +19,24 @@ defineProps<{ projectList: ProjectInfo[] }>()
       class="group max-w-[480px] overflow-hidden"
     >
       <div class="relative mb-4 overflow-hidden rounded-lg">
-        <div
-          class="h-[300px] transform rounded-lg transition-transform duration-200 group-hover:scale-105"
-        >
+        <div class="h-[300px] rounded-lg group-hover:scale-105">
           <NuxtImg
             format="webp"
             alt="project-cover"
             :src="`/images/projects/cover/${project.imgName}`"
             class="rounded-lg object-contain"
             fit="cover"
-            width="100%"
-            height="100%"
+            width="480"
+            height="300"
+            loading="lazy"
           />
           <div
-            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100"
+            class="absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-10 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100"
           >
             <NuxtLink
               :to="`/projects/project${project.id}`"
-              class="rounded bg-gray-800 p-2 text-white"
+              class="rounded-lg bg-gray-800 p-2 text-white"
+              title="專案內容"
             >
               Read More
             </NuxtLink>
@@ -49,6 +49,7 @@ defineProps<{ projectList: ProjectInfo[] }>()
           target="_blank"
           :to="project.link"
           class="mb-4 block text-xl font-medium underline hover:text-indigo-900 dark:text-gray-100"
+          :title="project.name"
           >{{ project.name }}</NuxtLink
         >
 
