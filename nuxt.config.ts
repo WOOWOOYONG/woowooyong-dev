@@ -6,8 +6,12 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/partytown'
   ],
+  partytown: {
+    forward: ['dataLayer.push']
+  },
   content: {
     highlight: {
       theme: {
@@ -55,6 +59,21 @@ export default defineNuxtConfig({
         {
           property: 'og:image',
           content: '/devlogo.png'
+        }
+      ],
+      script: [
+        {
+          type: 'text/partytown',
+          src: `https://www.googletagmanager.com/gtag/js?id=${process.env.NUXT_PUBLIC_GATG_ID}`
+        },
+        {
+          type: 'text/partytown',
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NUXT_PUBLIC_GATG_ID}');
+          `
         }
       ]
     },
