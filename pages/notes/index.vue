@@ -10,9 +10,17 @@ useSeoMeta({
   ogDescription: '我的一些心得筆記'
 })
 
+const displayRange = ref({
+  end: 4
+})
+
 const { data: notesList } = await useAsyncData('notesList', () => {
   return queryContent('notes').sort({ date: -1 }).find()
 })
+
+const loadMore = () => {
+  displayRange.value.end += 5
+}
 
 const count = await queryContent('notes').count()
 </script>
@@ -28,13 +36,15 @@ const count = await queryContent('notes').count()
       <div class="sm:col-span-7 xl:pr-52">
         <ul>
           <li
-            v-for="note in notesList"
+            v-for="(note, index) in notesList"
+            v-show="index < displayRange.end"
             :key="note._path"
             class="my-8 border-b border-slate-600 py-4 dark:text-gray-200"
           >
             <NuxtLink
               :to="note._path"
               class="block text-2xl font-bold duration-300 hover:-translate-x-1"
+              :title="note.title"
             >
               {{ note.title }}
             </NuxtLink>
@@ -56,6 +66,16 @@ const count = await queryContent('notes').count()
             </div>
           </li>
         </ul>
+        <div class="mt-10 flex justify-center">
+          <button
+            v-if="displayRange.end <= count"
+            type="button"
+            class="cursor-pointer rounded-lg border-2 bg-gray-800 px-3 py-2 text-gray-200 transition-transform hover:scale-105 hover:text-gray-200 dark:border-gray-200 dark:text-gray-200"
+            @click="loadMore"
+          >
+            Load More
+          </button>
+        </div>
       </div>
     </section>
   </div>
