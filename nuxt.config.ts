@@ -12,6 +12,9 @@ export default defineNuxtConfig({
   partytown: {
     forward: ['dataLayer.push']
   },
+  image: {
+    domains: ['https://woowooyong-dev.vercel.app/']
+  },
   content: {
     highlight: {
       theme: {
