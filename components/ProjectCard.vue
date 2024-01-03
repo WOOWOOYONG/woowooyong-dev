@@ -21,7 +21,6 @@ defineProps<{ projectList: ProjectInfo[] }>()
       <div class="relative mb-4 overflow-hidden rounded-lg">
         <div class="h-[300px] rounded-lg group-hover:scale-105">
           <NuxtImg
-            format="webp"
             alt="project-cover"
             :src="`/images/projects/cover/${project.imgName}`"
             class="rounded-lg object-contain"
