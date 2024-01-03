@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     forward: ['dataLayer.push']
   },
   image: {
-    domains: ['https://woowooyong-dev.vercel.app/']
+    domains: ['woowooyong-dev.vercel.app']
   },
   content: {
     highlight: {
