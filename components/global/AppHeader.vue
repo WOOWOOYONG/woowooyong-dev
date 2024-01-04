@@ -85,7 +85,16 @@ watch(offset, (value, oldValue) => {
             />
           </NuxtLink>
           <ThemeBtn />
-          <button class="ml-6 p-2" type="button" title="toggleButton" @click="toggleMenu">
+          <button
+            v-if="isOpen"
+            class="ml-6 p-2"
+            type="button"
+            title="close-menu-btn"
+            @click="toggleMenu"
+          >
+            <Icon name="ic:round-close" size="24" class="dark:text-gray-300" />
+          </button>
+          <button v-else class="ml-6 p-2" type="button" title="open-menu-btn" @click="toggleMenu">
             <Icon name="ri:menu-5-fill" size="24" class="dark:text-gray-300" />
           </button>
         </div>
@@ -94,7 +103,7 @@ watch(offset, (value, oldValue) => {
     <!-- Mobile Menu -->
     <div
       v-show="!isDesktop && isOpen"
-      class="border-t border-gray-600 bg-zinc-300 shadow-sm dark:bg-slate-700"
+      class="border-t border-gray-600 bg-zinc-100 shadow-sm dark:bg-slate-700"
     >
       <ul class="container flex flex-col items-center gap-6 py-4">
         <li
