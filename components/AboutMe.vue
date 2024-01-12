@@ -21,7 +21,7 @@ const cardTransform = computed(() => {
       </h2>
       <div ref="myCard" class="card-shadow rounded-md" :style="{ transform: cardTransform }">
         <div
-          class="personal-card rounded-md bg-[#f7f7f7] px-3 py-3 dark:bg-[#101722] dark:text-gray-200 md:flex-row md:px-10"
+          class="rounded-md bg-[#f7f7f7] px-3 py-3 dark:bg-[#101722] dark:text-gray-200 md:flex-row md:px-10"
         >
           <ul class="mb-4 flex w-full items-center justify-end gap-2">
             <li>
