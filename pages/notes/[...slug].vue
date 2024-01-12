@@ -57,7 +57,7 @@ const updateId = (newId: string) => {
   <section
     class="h-fit flex-col-reverse items-start justify-center gap-16 pb-28 pt-12 xl:flex xl:flex-row"
   >
-    <div v-if="data" class="grid-cols-12 xl:grid">
+    <div v-if="data" class="grid-cols-12 gap-8 xl:grid">
       <article class="article col-span-9">
         <ContentRenderer
           ref="nuxtContent"
