@@ -23,18 +23,29 @@ const observer = ref<IntersectionObserver | null | undefined>(null)
 const observerOptions = reactive({
   root: nuxtContent.value,
   threshold: 1,
-  rootMargin: '0px 0px -350px 0px'
+  rootMargin: '0px 0px -70% 0px'
 })
 
 onMounted(() => {
-  observer.value = new IntersectionObserver((entries) => {
+  const callback = (entries: IntersectionObserverEntry[]) => {
+    const visibleHeadings: IntersectionObserverEntry[] = []
+
     entries.forEach((entry) => {
-      const id: string | null = entry.target.getAttribute('id')
       if (entry.isIntersecting) {
-        activeTocId.value = id
+        visibleHeadings.push(entry)
       }
     })
-  }, observerOptions)
+    if (visibleHeadings.length > 0) {
+      // 對可見的標題進行排序，選擇最接近頂部的那個
+      const sortedByTop = visibleHeadings.sort(
+        (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
+      )
+      const id = sortedByTop[0].target.getAttribute('id')
+      activeTocId.value = id
+    }
+  }
+
+  observer.value = new IntersectionObserver(callback, observerOptions)
 
   setTimeout(() => {
     const allHElements = document.querySelectorAll('.article h2[id], .article h3[id]')
