@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 useSeoMeta({
   title: 'WOOWOOYONG-開發基地',
   ogTitle: 'WOOWOOYONG的開發基地',
