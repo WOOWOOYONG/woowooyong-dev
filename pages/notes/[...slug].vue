@@ -88,12 +88,13 @@ const updateId = (newId: string) => {
         </article>
         <div class="col-span-3 lg:mx-4 lg:pt-20">
           <div
+            v-if="data.body.toc"
             class="sticky right-0 top-20 order-last hidden border-l border-l-gray-700 px-6 opacity-80 xl:inline-block"
           >
             <h2 class="mb-4 text-lg font-medium dark:text-gray-200">目錄</h2>
             <TableOfContents
               :active-toc-id="activeTocId!"
-              :blog-post="data"
+              :toc-links="data.body.toc?.links"
               @update-active-id="updateId"
             />
           </div>
