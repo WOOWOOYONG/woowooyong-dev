@@ -1,15 +1,23 @@
 <script setup lang="ts">
-const props = defineProps({
-  activeTocId: {
-    type: String as PropType<string | null>,
-    default: null
-  },
-  blogPost: {
-    type: Object as PropType<any>,
-    default: () => ({}),
-    required: true
-  }
-})
+interface TocH3Link {
+  id: string
+  depth: number
+  text: string
+}
+
+interface TocH2Link {
+  id: string
+  depth: number
+  text: string
+  children?: TocH3Link[]
+}
+
+interface TocProps {
+  activeTocId: string | null
+  tocLinks: TocH2Link[]
+}
+
+const props = defineProps<TocProps>()
 
 const router = useRouter()
 const emits = defineEmits(['updateActiveId'])
@@ -18,8 +26,6 @@ const sliderHeight = useState('sliderHeight', () => 0)
 const sliderTop = useState('sliderTop', () => 0)
 const tocLinksH2: Ref<Array<HTMLElement>> = ref([])
 const tocLinksH3: Ref<Array<HTMLElement>> = ref([])
-
-const tocLinks = computed(() => props.blogPost.body.toc!.links ?? [])
 
 const onClick = (id: string) => {
   const el = document.getElementById(id)
