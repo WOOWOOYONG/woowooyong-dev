@@ -60,8 +60,9 @@ description: '我的專案介紹'
 
 ## 相關連結
 
-- [Demo - 前台更新版（vercel）](https://island-of-healing.vercel.app/)
-- [Demo - 前台（火箭隊官網）](https://islandofhealing2023.rocket-coding.com/)
+- [Demo 影片](https://www.youtube.com/watch?v=7Bhv-0q4n6U)
+- [Demo - 更新版前台（vercel）](https://island-of-healing.vercel.app/)
+- [Demo - 舊版前台（火箭隊官網）](https://islandofhealing2023.rocket-coding.com/)
 - [Demo - 後台](https://teamrocket12th.github.io/Island-Of-Healing-BackStage/#/)
 - [Github Repo - 前台](https://github.com/TeamRocket12th/Island-of-Healing)
 - [Github Repo - 後台](https://github.com/TeamRocket12th/Island-Of-Healing-BackStage)
