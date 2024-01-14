@@ -1,14 +1,13 @@
 <script setup lang="ts">
-interface TocH3Link {
+interface TocLinkBase {
   id: string
   depth: number
   text: string
 }
 
-interface TocH2Link {
-  id: string
-  depth: number
-  text: string
+interface TocH3Link extends TocLinkBase {}
+
+interface TocH2Link extends TocLinkBase {
   children?: TocH3Link[]
 }
 
