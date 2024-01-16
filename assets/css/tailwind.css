@@ -4,7 +4,7 @@
 
 @layer base {
   code {
-    @apply rounded bg-gray-300 px-2 py-1 dark:bg-gray-900 dark:text-orange-300;
+    @apply mx-1 rounded bg-gray-300 px-2 py-1 font-medium dark:bg-gray-900 dark:text-orange-300;
   }
 }
 
@@ -43,5 +43,5 @@
   content: '';
 }
 .prose :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
-  color: #dc2626;
+  color: #cd3333;
 }
