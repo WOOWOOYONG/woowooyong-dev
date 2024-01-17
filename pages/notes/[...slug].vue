@@ -104,7 +104,7 @@ const updateId = (newId: string) => {
         <p class="text-xl dark:text-gray-200">目前還沒有文章</p>
       </div>
     </section>
-    <section class="mx-auto mb-48 max-w-[65ch]">
+    <section v-if="data" class="mx-auto mb-48 max-w-[65ch]">
       <MsgBoard />
     </section>
   </div>
