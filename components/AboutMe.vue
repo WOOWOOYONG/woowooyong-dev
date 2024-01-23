@@ -1,25 +1,12 @@
-<script setup lang="ts">
-const myCard = ref<HTMLElement | null>(null)
-const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(myCard)
-
-const cardTransform = computed(() => {
-  const MAX_ROTATION = 6
-
-  const rX = (MAX_ROTATION / 2 - (elementY.value / elementHeight.value) * MAX_ROTATION).toFixed(2)
-  const rY = ((elementX.value / elementWidth.value) * MAX_ROTATION - MAX_ROTATION / 2).toFixed(2)
-  return isOutside.value
-    ? ''
-    : `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`
-})
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
     <section class="container flex flex-col items-center justify-center gap-3 pt-4">
       <h2 class="fade-in mb-10 mt-8 text-center text-3xl font-medium dark:text-gray-200 md:mb-20">
-        歡迎來到我的基地
+        歡迎來到我的基地 👋
       </h2>
-      <div ref="myCard" class="card-shadow rounded-md" :style="{ transform: cardTransform }">
+      <div class="card-shadow fadeInMoveDown rounded-md">
         <div
           class="rounded-md bg-[#f7f7f7] px-3 py-3 dark:bg-[#101722] dark:text-gray-200 md:flex-row md:px-10"
         >
@@ -60,10 +47,10 @@ const cardTransform = computed(() => {
 
 <style scoped>
 .card-shadow {
-  box-shadow: 0 4px 12px 3px rgb(150, 150, 150), 0 4px 15px 3px #fcfdfe;
+  box-shadow: 0 4px 12px 3px rgb(176, 176, 176);
   transition: transform 0.5s ease;
-  background-clip: padding-box;
 }
+
 .fade-in {
   animation: fadeIn 1s ease-in-out;
 }

@@ -16,7 +16,7 @@ defineProps<{ projectList: ProjectInfo[] }>()
     <li
       v-for="project in projectList"
       :key="project.id"
-      class="group max-w-[480px] overflow-hidden"
+      class="fadeInMoveDown group max-w-[480px] overflow-hidden"
     >
       <div class="relative mb-4 overflow-hidden rounded-lg">
         <div class="h-[300px] rounded-lg group-hover:scale-105">
@@ -27,7 +27,6 @@ defineProps<{ projectList: ProjectInfo[] }>()
             fit="cover"
             width="480"
             height="300"
-            loading="lazy"
           />
           <div
             class="absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-10 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100"
