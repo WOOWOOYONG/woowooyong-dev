@@ -15,6 +15,9 @@
   .toc-active {
     @apply font-bold text-emerald-600 dark:text-emerald-400;
   }
+  .fadeInMoveDown {
+    animation: fadeInMoveDown 1s ease-out forwards;
+  }
 }
 
 .page-enter-active,
@@ -44,4 +47,15 @@
 }
 .prose :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
   color: #cd3333;
+}
+
+@keyframes fadeInMoveDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
