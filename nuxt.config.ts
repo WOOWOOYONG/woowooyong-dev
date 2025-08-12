@@ -9,9 +9,11 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/partytown'
   ],
+
   partytown: {
     forward: ['dataLayer.push']
   },
+
   content: {
     highlight: {
       theme: {
@@ -24,22 +26,27 @@ export default defineNuxtConfig({
       }
     }
   },
+
   colorMode: {
     classSuffix: ''
   },
+
   components: [
     {
       path: '~/components',
       pathPrefix: false
     }
   ],
-  css: ['~/assets/css/tailwind.css'],
+
+  css: ['~/assets/styles/tailwind.css'],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {}
     }
   },
+
   app: {
     head: {
       htmlAttrs: {
@@ -78,5 +85,7 @@ export default defineNuxtConfig({
       ]
     },
     pageTransition: { name: 'page', mode: 'out-in' }
-  }
+  },
+
+  compatibilityDate: '2025-08-12'
 })
